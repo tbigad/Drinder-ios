@@ -18,7 +18,7 @@
 		54B1D232856F8C75C602695E /* Pods-Drinder-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drinder-ios.debug.xcconfig"; path = "Target Support Files/Pods-Drinder-ios/Pods-Drinder-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		7C210F970F6FF0B3C187140C /* Pods_Drinder_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drinder_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB13A0031578100D46B8D6F /* Pods-Drinder-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drinder-ios.release.xcconfig"; path = "Target Support Files/Pods-Drinder-ios/Pods-Drinder-ios.release.xcconfig"; sourceTree = "<group>"; };
-		F3C526BE24D498E0007DCAED /* Drinder-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drinder-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C526BE24D498E0007DCAED /* Drinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C526C124D498E0007DCAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3C526C224D498E0007DCAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F3C526CD24D498E5007DCAED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +45,6 @@
 				54B1D232856F8C75C602695E /* Pods-Drinder-ios.debug.xcconfig */,
 				CDB13A0031578100D46B8D6F /* Pods-Drinder-ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -70,7 +69,7 @@
 		F3C526BF24D498E0007DCAED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3C526BE24D498E0007DCAED /* Drinder-ios.app */,
+				F3C526BE24D498E0007DCAED /* Drinder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +105,7 @@
 			);
 			name = "Drinder-ios";
 			productName = "Drinder-ios";
-			productReference = F3C526BE24D498E0007DCAED /* Drinder-ios.app */;
+			productReference = F3C526BE24D498E0007DCAED /* Drinder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -325,8 +324,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "P.Drinder-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = P.Drinder;
+				PRODUCT_NAME = Drinder;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -344,8 +343,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "P.Drinder-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = P.Drinder;
+				PRODUCT_NAME = Drinder;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
