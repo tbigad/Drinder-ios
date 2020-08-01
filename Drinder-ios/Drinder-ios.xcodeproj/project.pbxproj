@@ -8,16 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		EF84320EAB7CB451CAEEE201 /* Pods_Drinder_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C210F970F6FF0B3C187140C /* Pods_Drinder_ios.framework */; };
+		F339AA2724D4D27000A6679B /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2624D4D27000A6679B /* Assembly.m */; };
+		F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2924D4D30100A6679B /* RootAssembly.m */; };
+		F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2D24D4D76100A6679B /* RootCoordinator.m */; };
 		F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526C224D498E0007DCAED /* AppDelegate.m */; };
 		F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CD24D498E5007DCAED /* Assets.xcassets */; };
 		F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CF24D498E6007DCAED /* LaunchScreen.storyboard */; };
 		F3C526D424D498E6007DCAED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526D324D498E6007DCAED /* main.m */; };
+		F3C526DF24D4BF11007DCAED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526DE24D4BF11007DCAED /* ViewController.m */; };
+		F3C526E324D4BFBB007DCAED /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526E124D4BFBB007DCAED /* LoginViewController.m */; };
+		F3C526E424D4BFBB007DCAED /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C526E224D4BFBB007DCAED /* LoginViewController.xib */; };
+		F3C526E724D4C3F3007DCAED /* Coordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526E624D4C3F3007DCAED /* Coordinator.m */; };
+		F3C526EE24D4C6E2007DCAED /* ModalCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526ED24D4C6E2007DCAED /* ModalCoordinator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54B1D232856F8C75C602695E /* Pods-Drinder-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drinder-ios.debug.xcconfig"; path = "Target Support Files/Pods-Drinder-ios/Pods-Drinder-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		7C210F970F6FF0B3C187140C /* Pods_Drinder_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drinder_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB13A0031578100D46B8D6F /* Pods-Drinder-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drinder-ios.release.xcconfig"; path = "Target Support Files/Pods-Drinder-ios/Pods-Drinder-ios.release.xcconfig"; sourceTree = "<group>"; };
+		F339AA2524D4D27000A6679B /* Assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
+		F339AA2624D4D27000A6679B /* Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
+		F339AA2824D4D30100A6679B /* RootAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootAssembly.h; sourceTree = "<group>"; };
+		F339AA2924D4D30100A6679B /* RootAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootAssembly.m; sourceTree = "<group>"; };
+		F339AA2C24D4D76100A6679B /* RootCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootCoordinator.h; sourceTree = "<group>"; };
+		F339AA2D24D4D76100A6679B /* RootCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootCoordinator.m; sourceTree = "<group>"; };
 		F3C526BE24D498E0007DCAED /* Drinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C526C124D498E0007DCAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3C526C224D498E0007DCAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -25,6 +39,15 @@
 		F3C526D024D498E6007DCAED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3C526D224D498E6007DCAED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3C526D324D498E6007DCAED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3C526DD24D4BF11007DCAED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F3C526DE24D4BF11007DCAED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F3C526E024D4BFBB007DCAED /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F3C526E124D4BFBB007DCAED /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F3C526E224D4BFBB007DCAED /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		F3C526E524D4C3F3007DCAED /* Coordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinator.h; sourceTree = "<group>"; };
+		F3C526E624D4C3F3007DCAED /* Coordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coordinator.m; sourceTree = "<group>"; };
+		F3C526EC24D4C6E2007DCAED /* ModalCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalCoordinator.h; sourceTree = "<group>"; };
+		F3C526ED24D4C6E2007DCAED /* ModalCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalCoordinator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +79,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F339AA2424D4D25300A6679B /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F339AA2524D4D27000A6679B /* Assembly.h */,
+				F339AA2624D4D27000A6679B /* Assembly.m */,
+				F339AA2824D4D30100A6679B /* RootAssembly.h */,
+				F339AA2924D4D30100A6679B /* RootAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F339AA2B24D4D72B00A6679B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F3C526E524D4C3F3007DCAED /* Coordinator.h */,
+				F3C526E624D4C3F3007DCAED /* Coordinator.m */,
+				F3C526EC24D4C6E2007DCAED /* ModalCoordinator.h */,
+				F3C526ED24D4C6E2007DCAED /* ModalCoordinator.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		F3C526B524D498E0007DCAED = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +122,9 @@
 		F3C526C024D498E0007DCAED /* Drinder-ios */ = {
 			isa = PBXGroup;
 			children = (
+				F339AA2424D4D25300A6679B /* Assembly */,
+				F3C526E824D4C663007DCAED /* Coordinator */,
+				F3C526DA24D4BCE3007DCAED /* UI */,
 				F3C526C124D498E0007DCAED /* AppDelegate.h */,
 				F3C526C224D498E0007DCAED /* AppDelegate.m */,
 				F3C526CD24D498E5007DCAED /* Assets.xcassets */,
@@ -85,6 +133,44 @@
 				F3C526D324D498E6007DCAED /* main.m */,
 			);
 			path = "Drinder-ios";
+			sourceTree = "<group>";
+		};
+		F3C526DA24D4BCE3007DCAED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F3C526DC24D4BE75007DCAED /* Registration */,
+				F3C526DB24D4BE6C007DCAED /* Login */,
+				F3C526DD24D4BF11007DCAED /* ViewController.h */,
+				F3C526DE24D4BF11007DCAED /* ViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F3C526DB24D4BE6C007DCAED /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F3C526E024D4BFBB007DCAED /* LoginViewController.h */,
+				F3C526E124D4BFBB007DCAED /* LoginViewController.m */,
+				F3C526E224D4BFBB007DCAED /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F3C526DC24D4BE75007DCAED /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		F3C526E824D4C663007DCAED /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F339AA2B24D4D72B00A6679B /* Base */,
+				F339AA2C24D4D76100A6679B /* RootCoordinator.h */,
+				F339AA2D24D4D76100A6679B /* RootCoordinator.m */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +233,7 @@
 			files = (
 				F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */,
 				F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */,
+				F3C526E424D4BFBB007DCAED /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +269,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C526EE24D4C6E2007DCAED /* ModalCoordinator.m in Sources */,
+				F3C526E324D4BFBB007DCAED /* LoginViewController.m in Sources */,
+				F3C526DF24D4BF11007DCAED /* ViewController.m in Sources */,
+				F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */,
+				F339AA2724D4D27000A6679B /* Assembly.m in Sources */,
 				F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */,
+				F3C526E724D4C3F3007DCAED /* Coordinator.m in Sources */,
 				F3C526D424D498E6007DCAED /* main.m in Sources */,
+				F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

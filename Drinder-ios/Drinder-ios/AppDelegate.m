@@ -7,16 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "RootCoordinator.h"
+#import "RootAssembly.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) RootCoordinator *rootCoordinator;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.rootCoordinator = [RootAssembly makeRootCoordinator];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setRootViewController:self.rootCoordinator.baseViewController];
+    [self.window makeKeyAndVisible];
+    [self.window setBackgroundColor:[UIColor clearColor]];
     return YES;
 }
 
