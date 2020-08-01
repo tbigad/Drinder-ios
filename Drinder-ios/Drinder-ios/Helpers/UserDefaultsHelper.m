@@ -9,5 +9,8 @@
 #import "UserDefaultsHelper.h"
 
 @implementation UserDefaultsHelper
-
-@end
+- (instancetype)init
+{
+    [NSException raise:@"init" format:@"UserDefaultsHelper only for class method"];
+    return nil;
+}@end

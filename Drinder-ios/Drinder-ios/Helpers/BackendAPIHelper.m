@@ -13,7 +13,7 @@ static NSString* baseURL = @"https://api.thecatapi.com";
 
 - (instancetype)init
 {
-    [NSException raise:@"init" format:@"BackendAPIHelper only for statics method"];
+    [NSException raise:@"init" format:@"BackendAPIHelper only for class method"];
     return nil;
 }
 @end
