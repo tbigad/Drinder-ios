@@ -13,4 +13,25 @@
 {
     [NSException raise:@"init" format:@"UserDefaultsHelper only for class method"];
     return nil;
-}@end
+}
+
++ (NSString *)getUserName {
+    NSString *ret = [[[NSUserDefaults standardUserDefaults] valueForKey:@"userName"] stringValue];
+    return ret;
+}
+
++ (void)setUserName:(NSString *)userName {
+    [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"userName"];
+}
+
++ (NSString *)getPassword {
+    //TODO: ADD DECODING
+    NSString *ret = [[[NSUserDefaults standardUserDefaults] valueForKey:@"password"] stringValue];
+    return ret;
+}
+
++ (void)setPassword:(NSString *)userName {
+    //TODO: ADD ENCODING
+    [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"password"];
+}
+@end

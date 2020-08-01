@@ -16,11 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupCoontent];
+    [self setupContent];
 }
 
-- (void) setupCoontent {
+- (void) setupContent {
     
 }
 
+- (void)showError:(NSString *)title Text:(NSString *)description {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:description
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 @end

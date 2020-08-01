@@ -10,6 +10,8 @@
 
 @interface LoginViewController ()
 @property (nonatomic, strong)LoginInteractor* loginInteractor;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @end
 
 @implementation LoginViewController
@@ -21,13 +23,38 @@
     }
     return self;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
+
+- (void)setupContent {
+    self.emailTextField.text = self.loginInteractor.login;
+    self.passwordTextField.text = self.loginInteractor.password;
+}
+
+- (IBAction)didChangedTextFields:(id)sender {
+    self.loginInteractor.login = self.emailTextField.text;
+    self.loginInteractor.password = self.passwordTextField.text;
+    NSLog(@"%@ %@",self.loginInteractor.login,self.loginInteractor.password);
+}
+
 
 - (IBAction)didTappedRegistrationButton:(UIButton *)sender {
     self.needRegistration();
+}
+
+- (IBAction)didTappedLoginButton:(UIButton *)sender {
+    __weak typeof(self)weakSelf = self;
+    self.loginInteractor.login = self.emailTextField.text;
+    self.loginInteractor.password = self.passwordTextField.text;
+    [self.loginInteractor didTapLoginWithComplition:^(UserInfoSession *userInfo, NSString * message) {
+        if (userInfo) {
+            weakSelf.loginSuccess(userInfo);
+        } else {
+            [weakSelf showError:@"Login error" Text:message];
+        }
+    }];
 }
 
 

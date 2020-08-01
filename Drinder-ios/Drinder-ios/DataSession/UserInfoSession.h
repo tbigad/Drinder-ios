@@ -1,5 +1,5 @@
 //
-//  Interactor.h
+//  UserInfoSession.h
 //  Drinder-ios
 //
 //  Created by Pavel N on 8/1/20.
@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "UserDataModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Interactor : NSObject
-//EMPTY CLASS
+@interface UserInfoSession : NSObject
+@property (nonatomic, strong) UserDataModel* userData;
+@property (nonatomic, copy) NSString *password; 
 @end
 
 NS_ASSUME_NONNULL_END

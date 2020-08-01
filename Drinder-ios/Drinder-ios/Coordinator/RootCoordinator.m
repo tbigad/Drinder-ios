@@ -29,7 +29,7 @@
     LoginViewController *login = [RootAssembly makeLoginWith:self.userModel];
     
     __weak typeof(self)weakSelf = self;
-    login.loginSuccess = ^{
+    login.loginSuccess = ^(UserInfoSession * _Nonnull userInfo) {
         //
     };
     

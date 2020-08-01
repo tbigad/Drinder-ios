@@ -11,8 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BackendAPIHelper : NSObject
-
-
++ (void) loginWith:(NSString*)name password:(NSString*)pass complition:(void(^)(NSData* data, NSError* error))handler;
 @end
 
 NS_ASSUME_NONNULL_END

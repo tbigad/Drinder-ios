@@ -16,6 +16,7 @@
 		F32EE99E24D56F690042FFFA /* RegistrationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99D24D56F690042FFFA /* RegistrationInteractor.m */; };
 		F32EE9A324D57F320042FFFA /* BackendAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE9A224D57F320042FFFA /* BackendAPIHelper.m */; };
 		F32EE9A624D580400042FFFA /* UserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE9A524D580400042FFFA /* UserDefaultsHelper.m */; };
+		F32EE9AD24D5A2840042FFFA /* UserInfoSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE9AC24D5A2840042FFFA /* UserInfoSession.m */; };
 		F339AA2724D4D27000A6679B /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2624D4D27000A6679B /* Assembly.m */; };
 		F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2924D4D30100A6679B /* RootAssembly.m */; };
 		F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2D24D4D76100A6679B /* RootCoordinator.m */; };
@@ -49,6 +50,8 @@
 		F32EE9A224D57F320042FFFA /* BackendAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackendAPIHelper.m; sourceTree = "<group>"; };
 		F32EE9A424D580400042FFFA /* UserDefaultsHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaultsHelper.h; sourceTree = "<group>"; };
 		F32EE9A524D580400042FFFA /* UserDefaultsHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsHelper.m; sourceTree = "<group>"; };
+		F32EE9AB24D5A2830042FFFA /* UserInfoSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoSession.h; sourceTree = "<group>"; };
+		F32EE9AC24D5A2840042FFFA /* UserInfoSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoSession.m; sourceTree = "<group>"; };
 		F339AA2524D4D27000A6679B /* Assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
 		F339AA2624D4D27000A6679B /* Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
 		F339AA2824D4D30100A6679B /* RootAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootAssembly.h; sourceTree = "<group>"; };
@@ -144,6 +147,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		F32EE9AA24D5A2640042FFFA /* DataSession */ = {
+			isa = PBXGroup;
+			children = (
+				F32EE9AB24D5A2830042FFFA /* UserInfoSession.h */,
+				F32EE9AC24D5A2840042FFFA /* UserInfoSession.m */,
+			);
+			path = DataSession;
+			sourceTree = "<group>";
+		};
 		F339AA2424D4D25300A6679B /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +198,7 @@
 		F3C526C024D498E0007DCAED /* Drinder-ios */ = {
 			isa = PBXGroup;
 			children = (
+				F32EE9AA24D5A2640042FFFA /* DataSession */,
 				F32EE9A024D57EF70042FFFA /* Helpers */,
 				F32EE99324D560010042FFFA /* DataModel */,
 				F32EE98C24D55B9F0042FFFA /* Interactor */,
@@ -346,6 +359,7 @@
 				F3C526DF24D4BF11007DCAED /* ViewController.m in Sources */,
 				F32EE99624D560180042FFFA /* UserDataModel.m in Sources */,
 				F32EE99224D55BD50042FFFA /* Interactor.m in Sources */,
+				F32EE9AD24D5A2840042FFFA /* UserInfoSession.m in Sources */,
 				F32EE9A624D580400042FFFA /* UserDefaultsHelper.m in Sources */,
 				F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */,
 				F339AA2724D4D27000A6679B /* Assembly.m in Sources */,

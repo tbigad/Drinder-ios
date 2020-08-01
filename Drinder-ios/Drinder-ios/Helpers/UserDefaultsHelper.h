@@ -11,7 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserDefaultsHelper : NSObject
-
++ (NSString*)getUserName;
++ (void) setUserName:(NSString*)userName;
++ (NSString*)getPassword;
++ (void) setPassword:(NSString*)userName;
 @end
 
 NS_ASSUME_NONNULL_END

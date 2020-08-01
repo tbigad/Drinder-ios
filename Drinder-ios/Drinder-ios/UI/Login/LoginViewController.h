@@ -12,6 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginViewController : ViewController
+@property (nonatomic, copy, nullable) void (^needRegistration)(void);
+@property (nonatomic, copy, nullable) void (^loginSuccess)(UserInfoSession * userInfo);
 - (instancetype)initWithLoginInteractor:(LoginInteractor*)interactor;
 @end
 

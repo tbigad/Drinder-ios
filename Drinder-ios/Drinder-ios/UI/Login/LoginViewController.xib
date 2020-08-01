@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="emailTextField" destination="PeT-FV-6rh" id="gdy-jn-wF7"/>
+                <outlet property="passwordTextField" destination="5pG-OQ-2YC" id="1Q7-RQ-YPV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,6 +40,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TV-tX-Spg">
                     <rect key="frame" x="168.5" y="313" width="38" height="30"/>
                     <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="didTappedLoginButton:" destination="-1" eventType="touchUpInside" id="bD5-qK-egP"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g53-R3-a1Y">
                     <rect key="frame" x="108" y="617" width="159" height="30"/>
