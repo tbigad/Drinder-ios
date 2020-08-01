@@ -30,9 +30,13 @@
 
 - (void)setupTabs {
     SearchCoordinator *searchCoordinator = [SearchAssembly makeSearchCoordinatorWith:self.userInfoSession andParent:self];
+    UITabBarItem* searchTabItem = [[UITabBarItem alloc]initWithTitle:nil image:[UIImage imageNamed:@"wine"] tag:0];
+    searchCoordinator.baseViewController.tabBarItem = searchTabItem;
     [self addTabbedCoordinator:searchCoordinator];
     
     MoreCoordinator *moreCoordinator = [MoreAssembly makeMoreCoordinatorWithParent:self];
+    UITabBarItem* moreTabItem = [[UITabBarItem alloc]initWithTitle:nil image:[UIImage imageNamed:@"more"] tag:1];
+    moreCoordinator.baseViewController.tabBarItem = moreTabItem;
     [self addTabbedCoordinator:moreCoordinator];
 }
 

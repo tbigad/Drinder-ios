@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-закрыть-окно-100.pdf",
+      "filename" : "Icon-App-60x60.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Icon-App-60x60@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Icon-App-60x60@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

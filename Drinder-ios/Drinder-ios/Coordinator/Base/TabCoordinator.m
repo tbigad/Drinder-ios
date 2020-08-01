@@ -21,7 +21,6 @@
         _tabbedCoordinators = [NSMutableArray new];
         _tabBar = [UITabBarController new];
         self.baseViewController = _tabBar;
-        [self setupTabs];
     }
     return self;
 }
