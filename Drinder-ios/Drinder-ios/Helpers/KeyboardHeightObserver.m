@@ -10,6 +10,15 @@
 #import "UIKit/UIKit.h"
 
 @implementation KeyboardHeightObserver
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self subscribeOnKeyboardEvents];
+    }
+    return self;
+}
+
 - (void)subscribeOnKeyboardEvents {
     // Keyboard will show
     [NSNotificationCenter.defaultCenter addObserver:self

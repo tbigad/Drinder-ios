@@ -33,6 +33,7 @@
         if ([jsonDict valueForKey:@"error"]) {
             NSString *msg = [jsonDict valueForKey:@"error"];
             complition(nil, msg);
+            return;
         }
         NSString *pass = [jsonDict valueForKey:@"pass"];
         NSString *userID = [jsonDict valueForKey:@"id"];
