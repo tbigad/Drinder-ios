@@ -9,7 +9,7 @@
 #import "Coordinator.h"
 @interface Coordinator ()
 @property (nonatomic, strong, nullable)NSMutableArray<Coordinator *> *childCoordinators;
-@property (nonatomic, strong, nullable)Coordinator *parentCoordinators;
+@property (nonatomic, weak, nullable)Coordinator *parentCoordinators;
 @end
 
 @implementation Coordinator

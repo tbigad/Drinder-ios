@@ -41,14 +41,6 @@
     self.passwordTextField.text = self.loginInteractor.password;
 }
 
-- (IBAction)didChangedTextFields:(id)sender {
-    self.loginInteractor.login = self.emailTextField.text;
-    self.loginInteractor.password = self.passwordTextField.text;
-    NSLog(@"%@ %@",self.loginInteractor.login,self.loginInteractor.password);
-    
-}
-
-
 - (IBAction)didTappedRegistrationButton:(UIButton *)sender {
     self.needRegistration();
 }
@@ -58,11 +50,13 @@
     self.loginInteractor.login = self.emailTextField.text;
     self.loginInteractor.password = self.passwordTextField.text;
     [self.loginInteractor didTapLoginWithComplition:^(UserInfoSession *userInfo, NSString * message) {
-        if (userInfo) {
-            weakSelf.loginSuccess(userInfo);
-        } else {
-            [weakSelf showError:@"Login error" Text:message];
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (userInfo) {
+                weakSelf.loginSuccess(userInfo);
+            } else {
+                [weakSelf showError:@"Login error" Text:message];
+            }
+        });
     }];
 }
 

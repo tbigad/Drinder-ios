@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MoreCoordinator : ModalCoordinator
-
+@property (nonatomic, copy, nullable) void (^logoutBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END

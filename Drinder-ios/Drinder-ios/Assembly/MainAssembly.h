@@ -8,13 +8,12 @@
 
 #import "Assembly.h"
 #import "MainTabCoordinator.h"
-#import "MoreViewController.h"
 #import "UserInfoSession.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MainAssembly : Assembly
-- (MainTabCoordinator *)makeMainCoordinatorWithUserInfoSession:(UserInfoSession *)session coordinator:(Coordinator*)parent;
++ (MainTabCoordinator *)makeMainCoordinatorWithUserInfoSession:(UserInfoSession *)session andParent:(Coordinator*)parent;
 @end
 
 NS_ASSUME_NONNULL_END

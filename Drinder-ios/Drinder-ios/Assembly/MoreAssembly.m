@@ -9,5 +9,11 @@
 #import "MoreAssembly.h"
 
 @implementation MoreAssembly
++ (MoreCoordinator *)makeMoreCoordinatorWithParent:(Coordinator *)parent {
+    return [[MoreCoordinator alloc] initWithParent:parent]; 
+}
 
++ (MoreViewController *)makeMore {
+    return [MoreViewController new];
+}
 @end

@@ -34,11 +34,13 @@
     
     __weak typeof(self)weakSelf = self;
     [self.registrationInteractor didTapRegistrationWithComplition:^(UserInfoSession * userInfo, NSString * message) {
-        if (userInfo) {
-            weakSelf.registrationSuccess(userInfo);
-        } else {
-            [weakSelf showError:@"Login error" Text:message];
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (userInfo) {
+                weakSelf.registrationSuccess(userInfo);
+            } else {
+                [weakSelf showError:@"Login error" Text:message];
+            }
+        });
     }];
 }
 

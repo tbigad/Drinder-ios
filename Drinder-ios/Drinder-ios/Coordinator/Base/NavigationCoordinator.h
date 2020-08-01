@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NavigationCoordinator : Coordinator
-
+-(void) pushViewController:(UIViewController*)controller;
+-(void) setFirstViewController:(UIViewController*)controller;
 @end
 
 NS_ASSUME_NONNULL_END

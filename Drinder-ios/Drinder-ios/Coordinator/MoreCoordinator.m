@@ -7,7 +7,21 @@
 //
 
 #import "MoreCoordinator.h"
+#import "MoreAssembly.h"
 
 @implementation MoreCoordinator
 
+- (instancetype)initWithParent:(Coordinator *)parent
+{
+    self = [super initWithParent:parent];
+    if (self) {
+        [self showMore];
+    }
+    return self;
+}
+
+- (void) showMore {
+    MoreViewController *moreViewController = [MoreAssembly makeMore];
+    self.baseViewController = moreViewController; 
+}
 @end

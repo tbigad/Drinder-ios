@@ -6,12 +6,15 @@
 //  Copyright © 2020 Pavel N. All rights reserved.
 //
 
-#import "ModalCoordinator.h"
+#import "MoreCoordinator.h"
+#import "MoreViewController.h"
+#import "Assembly.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MoreAssembly : ModalCoordinator
-
+@interface MoreAssembly : Assembly
++ (MoreCoordinator*) makeMoreCoordinatorWithParent:(Coordinator*)parent;
++ (MoreViewController*) makeMore; 
 @end
 
 NS_ASSUME_NONNULL_END

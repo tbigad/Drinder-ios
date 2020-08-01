@@ -27,4 +27,8 @@
 -(void) pushViewController:(UIViewController*)controller {
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+-(void) setFirstViewController:(UIViewController*)controller {
+    [self.navigationController setViewControllers:@[controller] animated:NO];
+}
 @end

@@ -9,6 +9,7 @@
 #import "RootCoordinator.h"
 #import "LoginViewController.h"
 #import "RootAssembly.h"
+#import "MainAssembly.h"
 @interface RootCoordinator ()
 @property (nonatomic, strong) UserDataModel* userModel;
 @end
@@ -30,7 +31,7 @@
     
     __weak typeof(self)weakSelf = self;
     login.loginSuccess = ^(UserInfoSession * _Nonnull userInfo) {
-        //
+        [weakSelf showMainTabWith:userInfo];
     };
     
     login.needRegistration = ^{
@@ -45,7 +46,7 @@
     __weak typeof(self)weakSelf = self;
     RegistrationViewController *registration = [RootAssembly makeRegistrationWith:self.userModel];
     registration.registrationSuccess = ^(UserInfoSession * _Nonnull userInfo) {
-        //
+        [weakSelf showMainTabWith:userInfo];
     };
     
     registration.registrationCanceled = ^{
@@ -56,4 +57,14 @@
     [self presentViewController:registration]; 
 }
 
+- (void) showMainTabWith:(UserInfoSession*)session {
+    __weak typeof(self)weakSelf = self;
+    MainTabCoordinator *tabCoordinator = [MainAssembly makeMainCoordinatorWithUserInfoSession:session andParent:self];
+    tabCoordinator.baseViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    tabCoordinator.logoutBlock = ^{
+        [weakSelf dismissViewController];
+    };
+    
+    [self presentViewController:tabCoordinator.baseViewController];
+}
 @end

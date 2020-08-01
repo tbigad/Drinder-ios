@@ -9,7 +9,9 @@
 #import "MainAssembly.h"
 
 @implementation MainAssembly
-- (MainTabCoordinator *)makeMainCoordinatorWithUserInfoSession:(UserInfoSession *)session coordinator:(Coordinator*)parent {
-    return [[MainTabCoordinator alloc] initWithParent:parent];
+
++ (MainTabCoordinator *)makeMainCoordinatorWithUserInfoSession:(UserInfoSession *)session andParent:(Coordinator *)parent {
+    return [[MainTabCoordinator alloc] initWithUserSession:session andParent:parent];
 }
+
 @end

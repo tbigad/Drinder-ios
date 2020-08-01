@@ -59,7 +59,11 @@
     if(self.KeyBoardHeighChanged)
     {
         CGRect rect = [(NSValue *)notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        self.KeyBoardHeighChanged([NSNumber numberWithFloat:rect.size.height]);
+        __block NSNumber *height = [NSNumber numberWithFloat:rect.size.height];
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.KeyBoardHeighChanged(height);
+        });
     }
 }
 

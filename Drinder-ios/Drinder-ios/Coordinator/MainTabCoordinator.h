@@ -7,11 +7,13 @@
 //
 
 #import "TabCoordinator.h"
+#import "UserInfoSession.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MainTabCoordinator : TabCoordinator
-
+@property (nonatomic, copy, nullable) void (^logoutBlock)(void);
+- (instancetype)initWithUserSession:(UserInfoSession*)userInfo andParent:(Coordinator*)parent;
 @end
 
 NS_ASSUME_NONNULL_END

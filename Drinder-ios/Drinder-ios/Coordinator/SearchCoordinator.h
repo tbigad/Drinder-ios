@@ -7,11 +7,12 @@
 //
 
 #import "NavigationCoordinator.h"
+#import "UserInfoSession.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchCoordinator : NavigationCoordinator
-
+- (instancetype)initWithUserSession:(UserInfoSession*)userInfo andParent:(Coordinator*)parent;
 @end
 
 NS_ASSUME_NONNULL_END
