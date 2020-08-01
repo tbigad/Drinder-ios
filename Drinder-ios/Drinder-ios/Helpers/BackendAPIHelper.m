@@ -36,4 +36,26 @@ static NSString* baseURL = @"https://hackaton-web-server.herokuapp.com";
     [task resume];
 }
 
++ (void)registrationWith:(NSString *)name password:(NSString *)pass complition:(void (^)(NSData *, NSError *))handler {
+    NSURLQueryItem *userLogin = [[NSURLQueryItem alloc] initWithName:@"login" value:name];
+    NSURLQueryItem *userPassword = [[NSURLQueryItem alloc] initWithName:@"pass" value:pass];
+    
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURL];
+    components.path = @"/register";
+    components.queryItems = @[userLogin,userPassword];
+    NSURL *url = components.URL;
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error) {
+            handler(nil, error);
+            return;
+        }
+        handler(data, error);
+    }];
+    [task resume];
+    
+}
+
 @end

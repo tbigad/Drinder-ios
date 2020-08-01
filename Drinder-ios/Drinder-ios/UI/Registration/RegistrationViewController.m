@@ -9,6 +9,9 @@
 #import "RegistrationViewController.h"
 
 @interface RegistrationViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+@property (strong, nonatomic) IBOutlet UITextField *firstPasswordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *secondPasswordTextField;
 @property (nonatomic, strong) RegistrationInteractor* registrationInteractor;
 @end
 
@@ -28,14 +31,20 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)didTappedSignUpButton:(UIButton *)sender {
+    self.registrationInteractor.firstPassword = self.firstPasswordTextField.text;
+    self.registrationInteractor.repeatPassword = self.secondPasswordTextField.text;
+    self.registrationInteractor.userName = self.emailTextField.text;
+    
+    __weak typeof(self)weakSelf = self;
+    [self.registrationInteractor didTapRegistrationWithComplition:^(UserInfoSession * userInfo, NSString * message) {
+        if (userInfo) {
+            weakSelf.registrationSuccess(userInfo);
+        } else {
+            [weakSelf showError:@"Login error" Text:message];
+        }
+    }];
 }
-*/
+
 
 @end

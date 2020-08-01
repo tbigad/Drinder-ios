@@ -35,16 +35,7 @@
             complition(nil, msg);
             return;
         }
-        NSString *pass = [jsonDict valueForKey:@"pass"];
-        NSString *userID = [jsonDict valueForKey:@"id"];
-        NSString *login = [jsonDict valueForKey:@"login"];
-        UserDataModel *userDataModel = [UserDataModel new];
-        userDataModel.userName = login;
-        userDataModel.userID = userID;
-        
-        UserInfoSession *userInfoSession = [UserInfoSession new];
-        userInfoSession.password = pass;
-        userInfoSession.userData = userDataModel;
+        UserInfoSession *userInfoSession = [[UserInfoSession alloc] initWithJSONDictionary:jsonDict];
         
         complition(userInfoSession, nil); 
     }];

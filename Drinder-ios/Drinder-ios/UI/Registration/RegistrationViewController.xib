@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController">
             <connections>
+                <outlet property="emailTextField" destination="sDW-HX-qwG" id="V9o-7H-odV"/>
+                <outlet property="firstPasswordTextField" destination="x2q-qj-oIp" id="LsB-8c-BRb"/>
+                <outlet property="secondPasswordTextField" destination="Xsb-vo-NRS" id="fQR-oH-iyg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,6 +24,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPo-vp-dKX">
                     <rect key="frame" x="180" y="433" width="54" height="30"/>
                     <state key="normal" title="Sign Up"/>
+                    <connections>
+                        <action selector="didTappedSignUpButton:" destination="-1" eventType="touchUpInside" id="Hor-DV-z5e"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUI-8L-RYH">
                     <rect key="frame" x="25" y="303" width="364" height="122"/>

@@ -7,12 +7,17 @@
 //
 
 #import "Interactor.h"
-#import "UserDataModel.h"
+#import "UserInfoSession.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegistrationInteractor : Interactor
+@property (nonatomic, copy)NSString *userName;
+@property (nonatomic, copy)NSString *firstPassword;
+@property (nonatomic, copy)NSString *repeatPassword;
+
 - (instancetype)initWithUserData:(UserDataModel*)userData;
+- (void) didTapRegistrationWithComplition:(void(^)(UserInfoSession *userInfo, NSString* message))complition;
 @end
 
 NS_ASSUME_NONNULL_END

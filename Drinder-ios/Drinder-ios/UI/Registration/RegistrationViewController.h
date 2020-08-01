@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegistrationViewController : ViewController
+@property (nonatomic, copy, nullable) void (^registrationCanceled)(void);
+@property (nonatomic, copy, nullable) void (^registrationSuccess)(UserInfoSession * userInfo);
+
 - (instancetype)initWithInteractor:(RegistrationInteractor*)interactor; 
 @end
 

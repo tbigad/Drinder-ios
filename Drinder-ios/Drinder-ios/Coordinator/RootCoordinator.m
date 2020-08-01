@@ -42,7 +42,16 @@
 }
 
 - (void) showRegistration {
+    __weak typeof(self)weakSelf = self;
     RegistrationViewController *registration = [RootAssembly makeRegistrationWith:self.userModel];
+    registration.registrationSuccess = ^(UserInfoSession * _Nonnull userInfo) {
+        //
+    };
+    
+    registration.registrationCanceled = ^{
+        [weakSelf dismissViewController];
+    };
+    
     registration.modalPresentationStyle = UIModalPresentationFullScreen; 
     [self presentViewController:registration]; 
 }
