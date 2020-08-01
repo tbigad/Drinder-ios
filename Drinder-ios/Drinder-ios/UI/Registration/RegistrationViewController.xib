@@ -10,8 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController">
             <connections>
-                <outlet property="ageSwitch" destination="13i-Rd-Ez6" id="Wfv-9k-tYi"/>
-                <outlet property="closeButton" destination="5sG-UE-CX0" id="K4k-pW-F1Y"/>
                 <outlet property="emailTextField" destination="sDW-HX-qwG" id="V9o-7H-odV"/>
                 <outlet property="firstPasswordTextField" destination="x2q-qj-oIp" id="LsB-8c-BRb"/>
                 <outlet property="secondPasswordTextField" destination="Xsb-vo-NRS" id="fQR-oH-iyg"/>

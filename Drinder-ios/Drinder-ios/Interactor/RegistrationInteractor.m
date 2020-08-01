@@ -8,7 +8,7 @@
 
 #import "RegistrationInteractor.h"
 #import "BackendAPIHelper.h"
-
+#import "RegistrationViewController.h"
 @interface RegistrationInteractor ()
 @property (nonatomic, weak) UserDataModel* userData;
 @end
@@ -19,6 +19,7 @@
     self = [super init];
     if (self) {
         _userData = userData;
+        _overEighteen = NO;
     }
     return self;
 }
@@ -48,7 +49,9 @@
 }
 
 - (BOOL) isValidRegistrationData {
-    //TODO:add solution
+    RegistrationViewController *registrarionViewColntroller = [RegistrationViewController new];
+    if (registrarionViewColntroller.emailTextField.text.length >= 8 && registrarionViewColntroller.firstPasswordTextField.text.length >= 3 && [registrarionViewColntroller.secondPasswordTextField.text isEqualToString:registrarionViewColntroller.firstPasswordTextField.text] && self.overEighteen) {
+    }
     return YES;
 }
 @end

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *userName;
 @property (nonatomic, copy)NSString *firstPassword;
 @property (nonatomic, copy)NSString *repeatPassword;
+@property (nonatomic, assign) BOOL overEighteen;
 
 - (instancetype)initWithUserData:(UserDataModel*)userData;
 - (void) didTapRegistrationWithComplition:(void(^)(UserInfoSession *userInfo, NSString* message))complition;

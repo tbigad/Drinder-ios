@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RegistrationViewController : ViewController
 @property (nonatomic, copy, nullable) void (^registrationCanceled)(void);
 @property (nonatomic, copy, nullable) void (^registrationSuccess)(UserInfoSession * userInfo);
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+@property (strong, nonatomic) IBOutlet UITextField *firstPasswordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *secondPasswordTextField;
 
 - (instancetype)initWithInteractor:(RegistrationInteractor*)interactor; 
 @end
