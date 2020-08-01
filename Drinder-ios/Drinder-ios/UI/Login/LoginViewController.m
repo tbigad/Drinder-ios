@@ -9,11 +9,18 @@
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
-
+@property (nonatomic, strong)LoginInteractor* loginInteractor;
 @end
 
 @implementation LoginViewController
-
+- (instancetype)initWithLoginInteractor:(LoginInteractor*)interactor
+{
+    self = [super init];
+    if (self) {
+        _loginInteractor = interactor; 
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

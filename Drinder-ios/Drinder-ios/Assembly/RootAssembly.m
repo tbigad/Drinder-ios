@@ -11,10 +11,15 @@
 @implementation RootAssembly
 
 + (RootCoordinator *)makeRootCoordinator {
-    return [RootCoordinator new];
+    return [[RootCoordinator alloc] initWithParent:nil and:[UserDataModel new]];
 }
 
-+ (LoginViewController *)makeLogin {
-    return [LoginViewController new];
++ (LoginViewController *)makeLoginWith:(LoginInteractor*)interactor {
+    return [[LoginViewController alloc]initWithLoginInteractor:interactor];
+}
+
+
++ (LoginInteractor*) makeLoginInteractorWith:(UserDataModel*)dataModel {
+    return [[LoginInteractor alloc] initWithUserDataModel:dataModel];
 }
 @end

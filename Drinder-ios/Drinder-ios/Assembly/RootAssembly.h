@@ -9,14 +9,15 @@
 #import "Assembly.h"
 #import "RootCoordinator.h"
 #import "LoginViewController.h"
-//#import "RegistrationViewController.h"
+#import "LoginInteractor.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RootAssembly : Assembly
-+ (RootCoordinator* ) makeRootCoordinator;
-+ (LoginViewController* ) makeLogin;
++ (RootCoordinator *)makeRootCoordinator;
++ (LoginViewController *)makeLoginWith:(LoginInteractor*)interactor;
++ (LoginInteractor*) makeLoginInteractorWith:(UserDataModel*)dataModel;
 //+ (RegistrationViewController* ) makeRegistration;
 @end
 

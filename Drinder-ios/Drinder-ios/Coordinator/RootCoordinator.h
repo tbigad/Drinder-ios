@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ModalCoordinator.h"
+#import "UserDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RootCoordinator : ModalCoordinator
-
+- (instancetype)initWithParent:(Coordinator *)parent and:(UserDataModel*)userModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,7 +8,7 @@
 
 #import "Coordinator.h"
 @interface Coordinator ()
-@property (nonatomic, strong) NSMutableArray<Coordinator*> *childCoordinators;
+@property (nonatomic, strong, nullable)Coordinator *childCoordinators;
 @end
 
 @implementation Coordinator
@@ -16,13 +16,12 @@
 {
     self = [super init];
     if (self) {
-        _childCoordinators = [NSMutableArray new];
     }
     return self;
 }
 
 - (void)addChild:(Coordinator *)childCoordinator {
-    [childCoordinator addChild:childCoordinator];
+    [self setChildCoordinators:childCoordinator];
 }
 
 @end

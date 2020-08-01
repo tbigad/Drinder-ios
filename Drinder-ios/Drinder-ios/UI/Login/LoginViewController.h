@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "LoginInteractor.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginViewController : ViewController
-
+- (instancetype)initWithLoginInteractor:(LoginInteractor*)interactor;
 @end
 
 NS_ASSUME_NONNULL_END

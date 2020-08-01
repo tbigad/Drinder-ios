@@ -39,15 +39,16 @@
                     <rect key="frame" x="168.5" y="313" width="38" height="30"/>
                     <state key="normal" title="Login"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g53-R3-a1Y">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g53-R3-a1Y">
                     <rect key="frame" x="108" y="617" width="159" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="I don't have an account"/>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="g53-R3-a1Y" secondAttribute="bottom" constant="20" id="4yh-HU-Y5D"/>
                 <constraint firstItem="VD5-mf-6rr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.8" id="7uJ-gY-l0f"/>
+                <constraint firstItem="g53-R3-a1Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GDc-pg-ccf"/>
                 <constraint firstItem="9TV-tX-Spg" firstAttribute="top" secondItem="VD5-mf-6rr" secondAttribute="bottom" constant="8" id="GPA-mm-IFo"/>
                 <constraint firstItem="9TV-tX-Spg" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Mal-NQ-q2r"/>
                 <constraint firstItem="VD5-mf-6rr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="25" id="dqp-lr-gqg"/>

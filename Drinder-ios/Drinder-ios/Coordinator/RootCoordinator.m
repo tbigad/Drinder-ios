@@ -9,19 +9,25 @@
 #import "RootCoordinator.h"
 #import "LoginViewController.h"
 #import "RootAssembly.h"
+@interface RootCoordinator ()
+@property (nonatomic, strong) UserDataModel* userModel;
+@end
+
 @implementation RootCoordinator
 
-- (instancetype)init
+- (instancetype)initWithParent:(Coordinator *)parent and:(UserDataModel*)userModel
 {
-    self = [super init];
+    self = [super initWithParent:parent];
     if (self) {
+        _userModel = userModel;
         [self showLogin]; 
     }
     return self;
 }
 
 - (void) showLogin {
-    LoginViewController *login = [RootAssembly makeLogin];
+    LoginInteractor* interactor = [RootAssembly makeLoginInteractorWith:self.userModel];
+    LoginViewController *login = [RootAssembly makeLoginWith:interactor];
     self.baseViewController = login;
     self.currentViewController = login;
 }
