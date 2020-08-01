@@ -14,6 +14,7 @@
 		F32EE99A24D56F470042FFFA /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99824D56F470042FFFA /* RegistrationViewController.m */; };
 		F32EE99B24D56F470042FFFA /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32EE99924D56F470042FFFA /* RegistrationViewController.xib */; };
 		F32EE99E24D56F690042FFFA /* RegistrationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99D24D56F690042FFFA /* RegistrationInteractor.m */; };
+		F32EE9A324D57F320042FFFA /* BackendAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE9A224D57F320042FFFA /* BackendAPIHelper.m */; };
 		F339AA2724D4D27000A6679B /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2624D4D27000A6679B /* Assembly.m */; };
 		F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2924D4D30100A6679B /* RootAssembly.m */; };
 		F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2D24D4D76100A6679B /* RootCoordinator.m */; };
@@ -43,6 +44,8 @@
 		F32EE99924D56F470042FFFA /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		F32EE99C24D56F690042FFFA /* RegistrationInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationInteractor.h; sourceTree = "<group>"; };
 		F32EE99D24D56F690042FFFA /* RegistrationInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationInteractor.m; sourceTree = "<group>"; };
+		F32EE9A124D57F310042FFFA /* BackendAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackendAPIHelper.h; sourceTree = "<group>"; };
+		F32EE9A224D57F320042FFFA /* BackendAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackendAPIHelper.m; sourceTree = "<group>"; };
 		F339AA2524D4D27000A6679B /* Assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
 		F339AA2624D4D27000A6679B /* Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
 		F339AA2824D4D30100A6679B /* RootAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootAssembly.h; sourceTree = "<group>"; };
@@ -127,6 +130,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		F32EE9A024D57EF70042FFFA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F32EE9A124D57F310042FFFA /* BackendAPIHelper.h */,
+				F32EE9A224D57F320042FFFA /* BackendAPIHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		F339AA2424D4D25300A6679B /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +181,7 @@
 		F3C526C024D498E0007DCAED /* Drinder-ios */ = {
 			isa = PBXGroup;
 			children = (
+				F32EE9A024D57EF70042FFFA /* Helpers */,
 				F32EE99324D560010042FFFA /* DataModel */,
 				F32EE98C24D55B9F0042FFFA /* Interactor */,
 				F339AA2424D4D25300A6679B /* Assembly */,
@@ -332,6 +345,7 @@
 				F339AA2724D4D27000A6679B /* Assembly.m in Sources */,
 				F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */,
 				F32EE99E24D56F690042FFFA /* RegistrationInteractor.m in Sources */,
+				F32EE9A324D57F320042FFFA /* BackendAPIHelper.m in Sources */,
 				F3C526E724D4C3F3007DCAED /* Coordinator.m in Sources */,
 				F3C526D424D498E6007DCAED /* main.m in Sources */,
 				F32EE99A24D56F470042FFFA /* RegistrationViewController.m in Sources */,
