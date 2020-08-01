@@ -7,8 +7,10 @@
 //
 
 #import "LoginViewController.h"
-
-@interface LoginViewController ()
+#import "KeyboardHeightObserver.h"
+@interface LoginViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstraint;
+@property KeyboardHeightObserver *keyHeightObserver;
 @property (nonatomic, strong)LoginInteractor* loginInteractor;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
@@ -19,13 +21,19 @@
 {
     self = [super init];
     if (self) {
-        _loginInteractor = interactor; 
+        _loginInteractor = interactor;
+        _keyHeightObserver = [KeyboardHeightObserver new];
     }
     return self;
 }
 
 - (void)viewDidLoad {
+    __weak typeof(self) weakSelf = self;
     [super viewDidLoad];
+    [self.keyHeightObserver setKeyBoardHeighChanged:^(NSNumber * _Nonnull height) {
+        [weakSelf.heightConstraint setConstant:height.floatValue];
+    }];
+    [self hideWhenTappedAround];
 }
 
 - (void)setupContent {
@@ -37,6 +45,7 @@
     self.loginInteractor.login = self.emailTextField.text;
     self.loginInteractor.password = self.passwordTextField.text;
     NSLog(@"%@ %@",self.loginInteractor.login,self.loginInteractor.password);
+    
 }
 
 
@@ -56,6 +65,9 @@
         }
     }];
 }
+
+
+
 
 
 @end

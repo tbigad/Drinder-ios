@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ViewController : UIViewController
 - (void) showError:(NSString*)title Text:(NSString*)description;
-- (void) setupContent; 
+- (void) setupContent;
+- (void)hideWhenTappedAround;
 @end
 
 NS_ASSUME_NONNULL_END

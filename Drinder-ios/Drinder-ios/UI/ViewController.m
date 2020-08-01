@@ -34,4 +34,14 @@
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
+
+- (void)hideWhenTappedAround {
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                               action:@selector(hideKeyboard)];
+    [self.view addGestureRecognizer:gesture];
+}
+- (void)hideKeyboard {
+    [self.view endEditing:true];//деактивирует всех ферст респондеров
+  
+}
 @end
