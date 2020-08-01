@@ -10,15 +10,6 @@
 
 @implementation ModalCoordinator
 
-- (instancetype)initWithParent:(Coordinator*)parent
-{
-    self = [super init];
-    if (self) {
-        [parent addChild:self];
-    }
-    return self;
-}
-
 - (void)presentViewController:(UIViewController *)controller {
     if(self.presentedViewController == controller) {
         return;
@@ -26,5 +17,9 @@
     self.presentedViewController = controller;
     self.currentViewController = controller;
     [self.baseViewController presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)dismissViewController {
+    [self.baseViewController dismissViewControllerAnimated:YES completion:nil];
 }
 @end

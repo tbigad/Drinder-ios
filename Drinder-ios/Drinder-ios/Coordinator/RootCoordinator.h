@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RootCoordinator : ModalCoordinator
-- (instancetype)initWithParent:(Coordinator *)parent and:(UserDataModel*)userModel;
+- (instancetype)initWithDataModel:(UserDataModel*)userModel;
 @end
 
 NS_ASSUME_NONNULL_END

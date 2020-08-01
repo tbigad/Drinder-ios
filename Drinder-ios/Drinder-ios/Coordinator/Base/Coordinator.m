@@ -12,10 +12,21 @@
 @end
 
 @implementation Coordinator
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        _childCoordinators = nil; 
+    }
+    return self;
+}
+
+- (instancetype)initWithParent:(Coordinator*)parent
+{
+    self = [super init];
+    if (self) {
+        [parent addChild:self];
     }
     return self;
 }

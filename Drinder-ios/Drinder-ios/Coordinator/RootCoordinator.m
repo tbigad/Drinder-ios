@@ -15,9 +15,9 @@
 
 @implementation RootCoordinator
 
-- (instancetype)initWithParent:(Coordinator *)parent and:(UserDataModel*)userModel
+- (instancetype)initWithDataModel:(UserDataModel*)userModel
 {
-    self = [super initWithParent:parent];
+    self = [super init];
     if (self) {
         _userModel = userModel;
         [self showLogin]; 

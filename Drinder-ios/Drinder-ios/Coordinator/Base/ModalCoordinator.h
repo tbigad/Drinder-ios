@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ModalCoordinator : Coordinator
 @property (nonatomic, strong)UIViewController *presentedViewController; 
-- (instancetype)initWithParent:(Coordinator*)parent;
 - (void)presentViewController:(UIViewController*)controller;
+- (void)dismissViewController;
 @end
 
 NS_ASSUME_NONNULL_END

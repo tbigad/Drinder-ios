@@ -11,7 +11,7 @@
 @implementation RootAssembly
 
 + (RootCoordinator *)makeRootCoordinator {
-    return [[RootCoordinator alloc] initWithParent:nil and:[UserDataModel new]];
+    return [[RootCoordinator alloc] initWithDataModel:[UserDataModel new]];
 }
 
 + (LoginViewController *)makeLoginWith:(UserDataModel*)dataModel {
