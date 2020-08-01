@@ -10,15 +10,16 @@
 #import "RootCoordinator.h"
 #import "LoginViewController.h"
 #import "LoginInteractor.h"
+#import "RegistrationInteractor.h"
+#import "RegistrationViewController.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RootAssembly : Assembly
 + (RootCoordinator *)makeRootCoordinator;
-+ (LoginViewController *)makeLoginWith:(LoginInteractor*)interactor;
-+ (LoginInteractor*) makeLoginInteractorWith:(UserDataModel*)dataModel;
-//+ (RegistrationViewController* ) makeRegistration;
++ (LoginViewController *)makeLoginWith:(UserDataModel*)dataModel;
++ (RegistrationViewController* ) makeRegistrationWith:(UserDataModel*)dataModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -26,9 +26,25 @@
 }
 
 - (void) showLogin {
-    LoginInteractor* interactor = [RootAssembly makeLoginInteractorWith:self.userModel];
-    LoginViewController *login = [RootAssembly makeLoginWith:interactor];
+    LoginViewController *login = [RootAssembly makeLoginWith:self.userModel];
+    
+    __weak typeof(self)weakSelf = self;
+    login.loginSuccess = ^{
+        //
+    };
+    
+    login.needRegistration = ^{
+        [weakSelf showRegistration];
+    };
+    
     self.baseViewController = login;
     self.currentViewController = login;
 }
+
+- (void) showRegistration {
+    RegistrationViewController *registration = [RootAssembly makeRegistrationWith:self.userModel];
+    //registration.modalPresentationStyle = UIModalPresentationFullScreen; 
+    [self presentViewController:registration]; 
+}
+
 @end

@@ -14,12 +14,20 @@
     return [[RootCoordinator alloc] initWithParent:nil and:[UserDataModel new]];
 }
 
-+ (LoginViewController *)makeLoginWith:(LoginInteractor*)interactor {
-    return [[LoginViewController alloc]initWithLoginInteractor:interactor];
++ (LoginViewController *)makeLoginWith:(UserDataModel*)dataModel {
+    return [[LoginViewController alloc]initWithLoginInteractor: [RootAssembly makeLoginInteractorWith:dataModel] ];
 }
 
 
 + (LoginInteractor*) makeLoginInteractorWith:(UserDataModel*)dataModel {
     return [[LoginInteractor alloc] initWithUserDataModel:dataModel];
+}
+
++ (RegistrationViewController *)makeRegistrationWith:(UserDataModel*)dataModel {
+    return [[RegistrationViewController alloc] initWithInteractor:[RootAssembly makeRegistrationInteractorWith:dataModel] ];
+}
+
++ (RegistrationInteractor *)makeRegistrationInteractorWith:(UserDataModel *)dataModel {
+    return [[RegistrationInteractor alloc] initWithUserData:dataModel];
 }
 @end

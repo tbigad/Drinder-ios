@@ -42,6 +42,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g53-R3-a1Y">
                     <rect key="frame" x="108" y="617" width="159" height="30"/>
                     <state key="normal" title="I don't have an account"/>
+                    <connections>
+                        <action selector="didTappedRegistrationButton:" destination="-1" eventType="touchUpInside" id="FEF-i3-xz6"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

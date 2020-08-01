@@ -11,6 +11,9 @@
 		F32EE98F24D55BBF0042FFFA /* LoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE98E24D55BBF0042FFFA /* LoginInteractor.m */; };
 		F32EE99224D55BD50042FFFA /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99124D55BD50042FFFA /* Interactor.m */; };
 		F32EE99624D560180042FFFA /* UserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99524D560180042FFFA /* UserDataModel.m */; };
+		F32EE99A24D56F470042FFFA /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99824D56F470042FFFA /* RegistrationViewController.m */; };
+		F32EE99B24D56F470042FFFA /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32EE99924D56F470042FFFA /* RegistrationViewController.xib */; };
+		F32EE99E24D56F690042FFFA /* RegistrationInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99D24D56F690042FFFA /* RegistrationInteractor.m */; };
 		F339AA2724D4D27000A6679B /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2624D4D27000A6679B /* Assembly.m */; };
 		F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2924D4D30100A6679B /* RootAssembly.m */; };
 		F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2D24D4D76100A6679B /* RootCoordinator.m */; };
@@ -35,6 +38,11 @@
 		F32EE99124D55BD50042FFFA /* Interactor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Interactor.m; sourceTree = "<group>"; };
 		F32EE99424D560180042FFFA /* UserDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDataModel.h; sourceTree = "<group>"; };
 		F32EE99524D560180042FFFA /* UserDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDataModel.m; sourceTree = "<group>"; };
+		F32EE99724D56F470042FFFA /* RegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		F32EE99824D56F470042FFFA /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		F32EE99924D56F470042FFFA /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		F32EE99C24D56F690042FFFA /* RegistrationInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationInteractor.h; sourceTree = "<group>"; };
+		F32EE99D24D56F690042FFFA /* RegistrationInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationInteractor.m; sourceTree = "<group>"; };
 		F339AA2524D4D27000A6679B /* Assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
 		F339AA2624D4D27000A6679B /* Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
 		F339AA2824D4D30100A6679B /* RootAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootAssembly.h; sourceTree = "<group>"; };
@@ -95,6 +103,8 @@
 				F32EE98E24D55BBF0042FFFA /* LoginInteractor.m */,
 				F32EE99024D55BD50042FFFA /* Interactor.h */,
 				F32EE99124D55BD50042FFFA /* Interactor.m */,
+				F32EE99C24D56F690042FFFA /* RegistrationInteractor.h */,
+				F32EE99D24D56F690042FFFA /* RegistrationInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -108,11 +118,19 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		F339AA2424D4D25300A6679B /* Assembly */ = {
+		F32EE99F24D571020042FFFA /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				F339AA2524D4D27000A6679B /* Assembly.h */,
 				F339AA2624D4D27000A6679B /* Assembly.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F339AA2424D4D25300A6679B /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F32EE99F24D571020042FFFA /* Base */,
 				F339AA2824D4D30100A6679B /* RootAssembly.h */,
 				F339AA2924D4D30100A6679B /* RootAssembly.m */,
 			);
@@ -190,6 +208,9 @@
 		F3C526DC24D4BE75007DCAED /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				F32EE99724D56F470042FFFA /* RegistrationViewController.h */,
+				F32EE99824D56F470042FFFA /* RegistrationViewController.m */,
+				F32EE99924D56F470042FFFA /* RegistrationViewController.xib */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -263,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */,
+				F32EE99B24D56F470042FFFA /* RegistrationViewController.xib in Resources */,
 				F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */,
 				F3C526E424D4BFBB007DCAED /* LoginViewController.xib in Resources */,
 			);
@@ -309,8 +331,10 @@
 				F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */,
 				F339AA2724D4D27000A6679B /* Assembly.m in Sources */,
 				F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */,
+				F32EE99E24D56F690042FFFA /* RegistrationInteractor.m in Sources */,
 				F3C526E724D4C3F3007DCAED /* Coordinator.m in Sources */,
 				F3C526D424D498E6007DCAED /* main.m in Sources */,
+				F32EE99A24D56F470042FFFA /* RegistrationViewController.m in Sources */,
 				F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
