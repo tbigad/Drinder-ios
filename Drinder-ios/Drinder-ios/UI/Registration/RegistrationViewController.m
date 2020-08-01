@@ -7,12 +7,14 @@
 //
 
 #import "RegistrationViewController.h"
-
+BOOL overEighteen;
 @interface RegistrationViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *closeButton;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *firstPasswordTextField;
 @property (strong, nonatomic) IBOutlet UITextField *secondPasswordTextField;
 @property (nonatomic, strong) RegistrationInteractor* registrationInteractor;
+@property (strong, nonatomic) IBOutlet UISwitch *ageSwitch;
 @end
 
 @implementation RegistrationViewController
@@ -22,13 +24,14 @@
     self = [super init];
     if (self) {
         _registrationInteractor = interactor;
+        _ageSwitch = [UISwitch new];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self hideWhenTappedAround];
 }
 
 - (IBAction)didTappedSignUpButton:(UIButton *)sender {
@@ -46,5 +49,12 @@
     }];
 }
 
+- (IBAction)didTapCloseButton:(UIButton *)sender {
+    
+}
+
+- (IBAction)didTapSwitch:(UISwitch *)sender {
+    overEighteen = YES;
+}
 
 @end
