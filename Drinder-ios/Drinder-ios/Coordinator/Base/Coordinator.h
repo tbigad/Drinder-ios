@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIViewController *currentViewController;
 @property (nonatomic, strong) UIViewController *baseViewController;
 - (instancetype)initWithParent:(Coordinator*)parent;
-- (void) addChild:(Coordinator*)childCoordinator;
+- (void) addChildCoordinator:(Coordinator*)childCoordinator;
 @end
 
 NS_ASSUME_NONNULL_END

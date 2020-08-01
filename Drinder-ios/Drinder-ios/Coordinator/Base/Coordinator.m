@@ -28,13 +28,13 @@
 {
     self = [super init];
     if (self) {
-        [parent addChild:self];
+        [parent addChildCoordinator:self];
         [self setParentCoordinators:parent]; 
     }
     return self;
 }
 
-- (void)addChild:(Coordinator *)childCoordinator {
+- (void)addChildCoordinator:(Coordinator *)childCoordinator {
     [self.childCoordinators addObject:childCoordinator];
 }
 

@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TabCoordinator : Coordinator
-
+- (void) setupTabs;
+- (void) addTabbedCoordinator:(Coordinator*) coordinator;
 @end
 
 NS_ASSUME_NONNULL_END
