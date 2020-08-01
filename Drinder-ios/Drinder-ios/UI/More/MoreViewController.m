@@ -7,26 +7,44 @@
 //
 
 #import "MoreViewController.h"
-
-@interface MoreViewController ()
-
+#import "MoreTableViewCell.h"
+@interface MoreViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) UITableView *tableView;
 @end
 
 @implementation MoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self setUpTableView];
+
+}
+-(void)setUpTableView {
+    self.tableView = [[UITableView alloc] init];
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+       self.tableView.delegate = self;
+       self.tableView.dataSource = self;
+       [self.tableView registerNib:[UINib nibWithNibName:[MoreTableViewCell reusableId] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[MoreTableViewCell reusableId]];
+       [self.view addSubview:self.tableView];
+       [NSLayoutConstraint activateConstraints:@[
+           [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+           [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:250],
+           [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+           [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant: - 80]
+       ]];
+}
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+   return 1;
+    
 }
 
-/*
-#pragma mark - Navigation
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MoreTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[MoreTableViewCell reusableId] forIndexPath:indexPath];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return cell;
+
 }
-*/
 
 @end
