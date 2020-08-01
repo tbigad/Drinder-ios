@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KeyboardHeightObserver :NSObject
 @property (nonatomic, copy, nullable) void (^KeyBoardHeighChanged)(NSNumber* height);
-- (void)hideWhenTappedAround ;
 @end
 
 NS_ASSUME_NONNULL_END

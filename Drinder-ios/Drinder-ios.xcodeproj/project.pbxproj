@@ -26,6 +26,13 @@
 		F339AA2724D4D27000A6679B /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2624D4D27000A6679B /* Assembly.m */; };
 		F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2924D4D30100A6679B /* RootAssembly.m */; };
 		F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F339AA2D24D4D76100A6679B /* RootCoordinator.m */; };
+		F3559BDA24D5EB67001C08EC /* MainTabCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BD924D5EB67001C08EC /* MainTabCoordinator.m */; };
+		F3559BDD24D5EC08001C08EC /* MainAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BDC24D5EC08001C08EC /* MainAssembly.m */; };
+		F3559BE024D5F1B1001C08EC /* NavigationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BDF24D5F1B1001C08EC /* NavigationCoordinator.m */; };
+		F3559BE324D5F347001C08EC /* SearchCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BE224D5F347001C08EC /* SearchCoordinator.m */; };
+		F3559BE624D5F37B001C08EC /* MoreCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BE524D5F37B001C08EC /* MoreCoordinator.m */; };
+		F3559BE924D5F3A5001C08EC /* SearchAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BE824D5F3A5001C08EC /* SearchAssembly.m */; };
+		F3559BEC24D5F3E3001C08EC /* MoreAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BEB24D5F3E3001C08EC /* MoreAssembly.m */; };
 		F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526C224D498E0007DCAED /* AppDelegate.m */; };
 		F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CD24D498E5007DCAED /* Assets.xcassets */; };
 		F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CF24D498E6007DCAED /* LaunchScreen.storyboard */; };
@@ -74,6 +81,20 @@
 		F339AA2924D4D30100A6679B /* RootAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootAssembly.m; sourceTree = "<group>"; };
 		F339AA2C24D4D76100A6679B /* RootCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootCoordinator.h; sourceTree = "<group>"; };
 		F339AA2D24D4D76100A6679B /* RootCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootCoordinator.m; sourceTree = "<group>"; };
+		F3559BD824D5EB67001C08EC /* MainTabCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabCoordinator.h; sourceTree = "<group>"; };
+		F3559BD924D5EB67001C08EC /* MainTabCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabCoordinator.m; sourceTree = "<group>"; };
+		F3559BDB24D5EC08001C08EC /* MainAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainAssembly.h; sourceTree = "<group>"; };
+		F3559BDC24D5EC08001C08EC /* MainAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainAssembly.m; sourceTree = "<group>"; };
+		F3559BDE24D5F1B1001C08EC /* NavigationCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationCoordinator.h; sourceTree = "<group>"; };
+		F3559BDF24D5F1B1001C08EC /* NavigationCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationCoordinator.m; sourceTree = "<group>"; };
+		F3559BE124D5F347001C08EC /* SearchCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchCoordinator.h; sourceTree = "<group>"; };
+		F3559BE224D5F347001C08EC /* SearchCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchCoordinator.m; sourceTree = "<group>"; };
+		F3559BE424D5F37B001C08EC /* MoreCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreCoordinator.h; sourceTree = "<group>"; };
+		F3559BE524D5F37B001C08EC /* MoreCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreCoordinator.m; sourceTree = "<group>"; };
+		F3559BE724D5F3A5001C08EC /* SearchAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchAssembly.h; sourceTree = "<group>"; };
+		F3559BE824D5F3A5001C08EC /* SearchAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchAssembly.m; sourceTree = "<group>"; };
+		F3559BEA24D5F3E3001C08EC /* MoreAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreAssembly.h; sourceTree = "<group>"; };
+		F3559BEB24D5F3E3001C08EC /* MoreAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreAssembly.m; sourceTree = "<group>"; };
 		F3C526BE24D498E0007DCAED /* Drinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C526C124D498E0007DCAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3C526C224D498E0007DCAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -201,6 +222,12 @@
 				F32EE99F24D571020042FFFA /* Base */,
 				F339AA2824D4D30100A6679B /* RootAssembly.h */,
 				F339AA2924D4D30100A6679B /* RootAssembly.m */,
+				F3559BDB24D5EC08001C08EC /* MainAssembly.h */,
+				F3559BDC24D5EC08001C08EC /* MainAssembly.m */,
+				F3559BE724D5F3A5001C08EC /* SearchAssembly.h */,
+				F3559BE824D5F3A5001C08EC /* SearchAssembly.m */,
+				F3559BEA24D5F3E3001C08EC /* MoreAssembly.h */,
+				F3559BEB24D5F3E3001C08EC /* MoreAssembly.m */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -214,6 +241,8 @@
 				F3C526ED24D4C6E2007DCAED /* ModalCoordinator.m */,
 				F32EE9AE24D5A7220042FFFA /* TabCoordinator.h */,
 				F32EE9AF24D5A7220042FFFA /* TabCoordinator.m */,
+				F3559BDE24D5F1B1001C08EC /* NavigationCoordinator.h */,
+				F3559BDF24D5F1B1001C08EC /* NavigationCoordinator.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -294,6 +323,12 @@
 				F339AA2B24D4D72B00A6679B /* Base */,
 				F339AA2C24D4D76100A6679B /* RootCoordinator.h */,
 				F339AA2D24D4D76100A6679B /* RootCoordinator.m */,
+				F3559BD824D5EB67001C08EC /* MainTabCoordinator.h */,
+				F3559BD924D5EB67001C08EC /* MainTabCoordinator.m */,
+				F3559BE124D5F347001C08EC /* SearchCoordinator.h */,
+				F3559BE224D5F347001C08EC /* SearchCoordinator.m */,
+				F3559BE424D5F37B001C08EC /* MoreCoordinator.h */,
+				F3559BE524D5F37B001C08EC /* MoreCoordinator.m */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -398,6 +433,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C526EE24D4C6E2007DCAED /* ModalCoordinator.m in Sources */,
+				F3559BDA24D5EB67001C08EC /* MainTabCoordinator.m in Sources */,
+				F3559BDD24D5EC08001C08EC /* MainAssembly.m in Sources */,
 				F3C526E324D4BFBB007DCAED /* LoginViewController.m in Sources */,
 				F32EE98F24D55BBF0042FFFA /* LoginInteractor.m in Sources */,
 				9B78E4D624D5B62100141277 /* KeyboardHeightObserver.m in Sources */,
@@ -406,15 +443,20 @@
 				F32EE99224D55BD50042FFFA /* Interactor.m in Sources */,
 				F32EE9AD24D5A2840042FFFA /* UserInfoSession.m in Sources */,
 				F32EE9A624D580400042FFFA /* UserDefaultsHelper.m in Sources */,
+				F3559BE924D5F3A5001C08EC /* SearchAssembly.m in Sources */,
 				F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */,
 				F339AA2724D4D27000A6679B /* Assembly.m in Sources */,
 				F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */,
+				F3559BE024D5F1B1001C08EC /* NavigationCoordinator.m in Sources */,
 				9B78E4DF24D5B9CC00141277 /* MoreTableViewCell.m in Sources */,
 				F32EE99E24D56F690042FFFA /* RegistrationInteractor.m in Sources */,
 				F32EE9A324D57F320042FFFA /* BackendAPIHelper.m in Sources */,
 				F3C526E724D4C3F3007DCAED /* Coordinator.m in Sources */,
 				F32EE9B024D5A7220042FFFA /* TabCoordinator.m in Sources */,
 				F3C526D424D498E6007DCAED /* main.m in Sources */,
+				F3559BE624D5F37B001C08EC /* MoreCoordinator.m in Sources */,
+				F3559BE324D5F347001C08EC /* SearchCoordinator.m in Sources */,
+				F3559BEC24D5F3E3001C08EC /* MoreAssembly.m in Sources */,
 				F32EE99A24D56F470042FFFA /* RegistrationViewController.m in Sources */,
 				9B78E4E224D5B9CC00141277 /* MoreViewController.m in Sources */,
 				F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */,
