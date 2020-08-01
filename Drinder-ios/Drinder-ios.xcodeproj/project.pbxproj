@@ -12,6 +12,10 @@
 		9B78E4E024D5B9CC00141277 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78E4DB24D5B9CC00141277 /* MoreTableViewCell.xib */; };
 		9B78E4E124D5B9CC00141277 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78E4DC24D5B9CC00141277 /* MoreViewController.xib */; };
 		9B78E4E224D5B9CC00141277 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78E4DD24D5B9CC00141277 /* MoreViewController.m */; };
+		9B78E4E824D600B500141277 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78E4E624D600B500141277 /* SearchViewController.m */; };
+		9B78E4E924D600B500141277 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78E4E724D600B500141277 /* SearchViewController.xib */; };
+		9B78E4ED24D602B100141277 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78E4EB24D602B100141277 /* SearchTableViewCell.m */; };
+		9B78E4EE24D602B100141277 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78E4EC24D602B100141277 /* SearchTableViewCell.xib */; };
 		EF84320EAB7CB451CAEEE201 /* Pods_Drinder_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C210F970F6FF0B3C187140C /* Pods_Drinder_ios.framework */; };
 		F32EE98F24D55BBF0042FFFA /* LoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE98E24D55BBF0042FFFA /* LoginInteractor.m */; };
 		F32EE99224D55BD50042FFFA /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99124D55BD50042FFFA /* Interactor.m */; };
@@ -55,6 +59,12 @@
 		9B78E4DC24D5B9CC00141277 /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		9B78E4DD24D5B9CC00141277 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		9B78E4DE24D5B9CC00141277 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		9B78E4E524D600B500141277 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		9B78E4E624D600B500141277 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		9B78E4E724D600B500141277 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		9B78E4EA24D602B100141277 /* SearchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		9B78E4EB24D602B100141277 /* SearchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		9B78E4EC24D602B100141277 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		CDB13A0031578100D46B8D6F /* Pods-Drinder-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drinder-ios.release.xcconfig"; path = "Target Support Files/Pods-Drinder-ios/Pods-Drinder-ios.release.xcconfig"; sourceTree = "<group>"; };
 		F32EE98D24D55BBF0042FFFA /* LoginInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginInteractor.h; sourceTree = "<group>"; };
 		F32EE98E24D55BBF0042FFFA /* LoginInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginInteractor.m; sourceTree = "<group>"; };
@@ -147,8 +157,8 @@
 			children = (
 				9B78E4D824D5B9CC00141277 /* Cells */,
 				9B78E4DC24D5B9CC00141277 /* MoreViewController.xib */,
-				9B78E4DD24D5B9CC00141277 /* MoreViewController.m */,
 				9B78E4DE24D5B9CC00141277 /* MoreViewController.h */,
+				9B78E4DD24D5B9CC00141277 /* MoreViewController.m */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -159,8 +169,21 @@
 				9B78E4D924D5B9CC00141277 /* MoreTableViewCell.h */,
 				9B78E4DA24D5B9CC00141277 /* MoreTableViewCell.m */,
 				9B78E4DB24D5B9CC00141277 /* MoreTableViewCell.xib */,
+				9B78E4EA24D602B100141277 /* SearchTableViewCell.h */,
+				9B78E4EB24D602B100141277 /* SearchTableViewCell.m */,
+				9B78E4EC24D602B100141277 /* SearchTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		9B78E4E424D6004500141277 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9B78E4E524D600B500141277 /* SearchViewController.h */,
+				9B78E4E624D600B500141277 /* SearchViewController.m */,
+				9B78E4E724D600B500141277 /* SearchViewController.xib */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		F32EE98C24D55B9F0042FFFA /* Interactor */ = {
@@ -288,6 +311,7 @@
 		F3C526DA24D4BCE3007DCAED /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9B78E4E424D6004500141277 /* Search */,
 				9B78E4D724D5B9CC00141277 /* More */,
 				F3C526DC24D4BE75007DCAED /* Registration */,
 				F3C526DB24D4BE6C007DCAED /* Login */,
@@ -392,11 +416,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */,
+				9B78E4EE24D602B100141277 /* SearchTableViewCell.xib in Resources */,
 				9B78E4E124D5B9CC00141277 /* MoreViewController.xib in Resources */,
 				9B78E4E024D5B9CC00141277 /* MoreTableViewCell.xib in Resources */,
 				F32EE99B24D56F470042FFFA /* RegistrationViewController.xib in Resources */,
 				F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */,
 				F3C526E424D4BFBB007DCAED /* LoginViewController.xib in Resources */,
+				9B78E4E924D600B500141277 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +462,7 @@
 				F3559BDA24D5EB67001C08EC /* MainTabCoordinator.m in Sources */,
 				F3559BDD24D5EC08001C08EC /* MainAssembly.m in Sources */,
 				F3C526E324D4BFBB007DCAED /* LoginViewController.m in Sources */,
+				9B78E4E824D600B500141277 /* SearchViewController.m in Sources */,
 				F32EE98F24D55BBF0042FFFA /* LoginInteractor.m in Sources */,
 				9B78E4D624D5B62100141277 /* KeyboardHeightObserver.m in Sources */,
 				F3C526DF24D4BF11007DCAED /* ViewController.m in Sources */,
@@ -460,6 +487,7 @@
 				F32EE99A24D56F470042FFFA /* RegistrationViewController.m in Sources */,
 				9B78E4E224D5B9CC00141277 /* MoreViewController.m in Sources */,
 				F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */,
+				9B78E4ED24D602B100141277 /* SearchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

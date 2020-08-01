@@ -49,8 +49,7 @@
 }
 
 - (BOOL) isValidRegistrationData {
-    RegistrationViewController *registrarionViewColntroller = [RegistrationViewController new];
-    if (registrarionViewColntroller.emailTextField.text.length >= 8 && registrarionViewColntroller.firstPasswordTextField.text.length >= 3 && [registrarionViewColntroller.secondPasswordTextField.text isEqualToString:registrarionViewColntroller.firstPasswordTextField.text] && self.overEighteen) {
+    if (self.userName.length >= 8 && self.firstPassword.length >= 3 && [self.firstPassword isEqualToString:self.repeatPassword] && self.overEighteen) {
     }
     return YES;
 }
