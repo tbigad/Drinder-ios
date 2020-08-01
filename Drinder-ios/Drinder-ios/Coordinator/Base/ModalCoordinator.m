@@ -10,6 +10,7 @@
 
 @implementation ModalCoordinator
 
+
 - (void)presentViewController:(UIViewController *)controller {
     if(self.presentedViewController == controller) {
         return;

@@ -43,7 +43,7 @@
 
 - (void) showRegistration {
     RegistrationViewController *registration = [RootAssembly makeRegistrationWith:self.userModel];
-    //registration.modalPresentationStyle = UIModalPresentationFullScreen; 
+    registration.modalPresentationStyle = UIModalPresentationFullScreen; 
     [self presentViewController:registration]; 
 }
 

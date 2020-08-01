@@ -8,7 +8,8 @@
 
 #import "Coordinator.h"
 @interface Coordinator ()
-@property (nonatomic, strong, nullable)Coordinator *childCoordinators;
+@property (nonatomic, strong, nullable)NSMutableArray<Coordinator *> *childCoordinators;
+@property (nonatomic, strong, nullable)Coordinator *parentCoordinators;
 @end
 
 @implementation Coordinator
@@ -17,7 +18,8 @@
 {
     self = [super init];
     if (self) {
-        _childCoordinators = nil; 
+        _childCoordinators = [NSMutableArray new];
+        _parentCoordinators = nil;
     }
     return self;
 }
@@ -27,12 +29,13 @@
     self = [super init];
     if (self) {
         [parent addChild:self];
+        [self setParentCoordinators:parent]; 
     }
     return self;
 }
 
 - (void)addChild:(Coordinator *)childCoordinator {
-    [self setChildCoordinators:childCoordinator];
+    [self.childCoordinators addObject:childCoordinator];
 }
 
 @end
