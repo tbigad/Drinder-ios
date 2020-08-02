@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 -(instancetype)initWithLocationJSONDataDictionary:(NSDictionary*)dictionary;
+- (void) parseDetailsDictionary:(NSDictionary *)dictionary;
 @end
 
 NS_ASSUME_NONNULL_END

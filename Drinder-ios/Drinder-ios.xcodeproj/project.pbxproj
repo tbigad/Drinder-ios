@@ -17,6 +17,7 @@
 		F32E490224D71DD80076EC29 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F32E48FD24D71DD80076EC29 /* SearchTableViewCell.m */; };
 		F32E490924D71E310076EC29 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F32E490724D71E310076EC29 /* MoreTableViewCell.m */; };
 		F32E490A24D71E310076EC29 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32E490824D71E310076EC29 /* MoreTableViewCell.xib */; };
+		F32E491024D72C650076EC29 /* GetDetailsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F32E490F24D72C650076EC29 /* GetDetailsOperation.m */; };
 		F32EE98F24D55BBF0042FFFA /* LoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE98E24D55BBF0042FFFA /* LoginInteractor.m */; };
 		F32EE99224D55BD50042FFFA /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99124D55BD50042FFFA /* Interactor.m */; };
 		F32EE99624D560180042FFFA /* UserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99524D560180042FFFA /* UserDataModel.m */; };
@@ -75,6 +76,8 @@
 		F32E490624D71E310076EC29 /* MoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableViewCell.h; sourceTree = "<group>"; };
 		F32E490724D71E310076EC29 /* MoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableViewCell.m; sourceTree = "<group>"; };
 		F32E490824D71E310076EC29 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
+		F32E490E24D72C650076EC29 /* GetDetailsOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetDetailsOperation.h; sourceTree = "<group>"; };
+		F32E490F24D72C650076EC29 /* GetDetailsOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetDetailsOperation.m; sourceTree = "<group>"; };
 		F32EE98D24D55BBF0042FFFA /* LoginInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginInteractor.h; sourceTree = "<group>"; };
 		F32EE98E24D55BBF0042FFFA /* LoginInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginInteractor.m; sourceTree = "<group>"; };
 		F32EE99024D55BD50042FFFA /* Interactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interactor.h; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 				F3559C1224D70C2B001C08EC /* PostLocationOperation.m */,
 				F3559C1424D70C52001C08EC /* GetNearestUsersLocation.h */,
 				F3559C1524D70C52001C08EC /* GetNearestUsersLocation.m */,
+				F32E490E24D72C650076EC29 /* GetDetailsOperation.h */,
+				F32E490F24D72C650076EC29 /* GetDetailsOperation.m */,
 			);
 			path = BackendOperations;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 				9B78E4E224D5B9CC00141277 /* MoreViewController.m in Sources */,
 				F3559BF524D6D964001C08EC /* UserDetailsInfo.m in Sources */,
 				F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */,
+				F32E491024D72C650076EC29 /* GetDetailsOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

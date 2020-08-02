@@ -7,10 +7,13 @@
 //
 
 #import "AfterLoginGetInfoOperation.h"
+#import "GetDetailsOperation.h"
 
 @interface AfterLoginGetInfoOperation ()
 @property (nonatomic, strong)NSOperationQueue *queue;
 @property (nonatomic, weak)UserInfoSession *userSession;
+@property (nonatomic, strong) NSArray<NearestUserData *> * nearestUserData;
+
 @end
 @implementation AfterLoginGetInfoOperation
 - (instancetype)initWithUserSession:(UserInfoSession*)session
@@ -24,14 +27,29 @@
 }
 
 - (void)main {
-    self.queue.maxConcurrentOperationCount = 1;
     __weak typeof(self)wealSelf = self;
     PostLocationOperation* postLocation = [[PostLocationOperation alloc] initWithSession:self.userSession];
     GetNearestUsersLocation *getNearest = [[GetNearestUsersLocation alloc] initWithSession:self.userSession];
     [getNearest setResultingData:^(NSArray<NearestUserData *> * data) {
-        wealSelf.resultingData(data);
+        wealSelf.nearestUserData = data;
     }];
     [self.queue addOperations:@[postLocation, getNearest] waitUntilFinished:YES];
+    
+    NSMutableArray<NSOperation*> *detailsOperations = [NSMutableArray new];
+    
+    NSBlockOperation *finishBlock = [NSBlockOperation blockOperationWithBlock:^{
+        wealSelf.resultingData([wealSelf.nearestUserData copy]);
+    }];
+    
+    for (NearestUserData *user in self.nearestUserData) {
+        GetDetailsOperation* operation = [[GetDetailsOperation alloc] initWithUserData:user];
+        [finishBlock addDependency:operation];
+        [detailsOperations addObject:operation];
+    }
+    [detailsOperations addObject:finishBlock];
+    [self.queue addOperations:detailsOperations waitUntilFinished:YES];
+
+    
     [self finish];
 }
 
