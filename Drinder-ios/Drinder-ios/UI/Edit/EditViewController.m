@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem new];
-    self.navigationItem.leftBarButtonItem.title = @"Save";
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem new];
+    self.navigationItem.rightBarButtonItem.title = @"Save";
 }
 
 /*

@@ -11,6 +11,7 @@
 #import "UserInfoSession.h"
 #import "SearchViewController.h"
 #import "UserDetailsViewController.h"
+#import "EditViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (SearchCoordinator*) makeSearchCoordinatorWith:(UserInfoSession*)session andParent:(Coordinator*)parent;
 + (SearchViewController*) makeSearchWithWith:(UserInfoSession*)userInfo;
 + (UserDetailsViewController*) makeUserDetailsWith:(NearestUserData*)data;
++ (EditViewController *) makeEditViewControllerWith:(UserInfoSession *)session;
 @end
 
 NS_ASSUME_NONNULL_END

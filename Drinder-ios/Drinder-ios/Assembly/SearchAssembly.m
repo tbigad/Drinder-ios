@@ -25,4 +25,9 @@
 + (UserDetailsViewController *)makeUserDetailsWith:(NearestUserData *)data {
     return [[UserDetailsViewController alloc] initWithNearesUserData:data];
 }
+
++ (EditViewController *) makeEditViewControllerWith:(UserInfoSession *)session {
+    return [[EditViewController alloc]init];
+    //TODO: init with session
+}
 @end

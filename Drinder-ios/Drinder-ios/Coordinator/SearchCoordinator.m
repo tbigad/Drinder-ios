@@ -9,6 +9,7 @@
 #import "SearchCoordinator.h"
 #import "SearchAssembly.h"
 
+
 @interface SearchCoordinator()
 @property (nonatomic , weak)UserInfoSession *userInfoSession;
 @end
@@ -21,7 +22,7 @@
     self = [super initWithParent:parent];
     if (self) {
         _userInfoSession = userInfo;
-        [self showSearch]; 
+        [self showSearch];
     }
     return self;
 }
@@ -32,6 +33,9 @@
     searchViewController.showDetail = ^(NearestUserData * _Nonnull nearesUser) {
         [weakSelf showUserDetails:nearesUser];
     };
+    searchViewController.openEdit = ^{
+        [weakSelf showEditController];  
+    };
     [self setFirstViewController:searchViewController];
 }
 
@@ -40,4 +44,8 @@
     [self pushViewController:controller];
 }
 
+-(void) showEditController {
+    EditViewController *edit = [SearchAssembly makeEditViewControllerWith:self.userInfoSession];
+    [self pushViewController:edit];
+}
 @end

@@ -77,7 +77,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="HPa-uX-x9D" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="NKb-7v-Lfq"/>
-                <constraint firstItem="HPa-uX-x9D" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Xk6-1Y-f45"/>
+                <constraint firstItem="HPa-uX-x9D" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="Xk6-1Y-f45"/>
                 <constraint firstItem="HPa-uX-x9D" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="i6n-C5-spd"/>
                 <constraint firstItem="HPa-uX-x9D" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="kgZ-Jj-ieg"/>
                 <constraint firstItem="HPa-uX-x9D" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="wAF-YS-tdG"/>

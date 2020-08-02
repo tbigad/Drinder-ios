@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EditViewController : UINavigationController
+@interface EditViewController : UIViewController
+
 
 @end
 

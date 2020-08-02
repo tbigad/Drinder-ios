@@ -88,7 +88,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    self.openEdit();
 }
 
 #pragma mark - Methods from inteactor
