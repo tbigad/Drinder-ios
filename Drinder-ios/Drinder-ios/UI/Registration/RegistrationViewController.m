@@ -9,6 +9,7 @@
 #import "RegistrationViewController.h"
 @interface RegistrationViewController ()
 @property (nonatomic, strong) RegistrationInteractor* registrationInteractor;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation RegistrationViewController
@@ -31,10 +32,11 @@
     self.registrationInteractor.firstPassword = self.firstPasswordTextField.text;
     self.registrationInteractor.repeatPassword = self.secondPasswordTextField.text;
     self.registrationInteractor.userName = self.emailTextField.text;
-    
+    [self.activityIndicator startAnimating];
     __weak typeof(self)weakSelf = self;
     [self.registrationInteractor didTapRegistrationWithComplition:^(UserInfoSession * userInfo, NSString * message) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.activityIndicator stopAnimating];
             if (userInfo) {
                 weakSelf.registrationSuccess(userInfo);
             } else {
@@ -51,5 +53,7 @@
 - (IBAction)didTapSwitch:(UISwitch *)sender {
     self.registrationInteractor.overEighteen = [sender isOn];
 }
-
+-(BOOL)shouldAutorotate {
+    return NO;
+}
 @end

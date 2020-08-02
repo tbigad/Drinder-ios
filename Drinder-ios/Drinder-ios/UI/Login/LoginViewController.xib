@@ -53,18 +53,24 @@
                         <action selector="didTappedRegistrationButton:" destination="-1" eventType="touchUpInside" id="FEF-i3-xz6"/>
                     </connections>
                 </button>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-DA-4ox">
-                    <rect key="frame" x="167.5" y="358" width="40" height="40"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="tGM-0t-ILf">
+                    <rect key="frame" x="30" y="139" width="315" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="5gu-pk-4Bw"/>
-                        <constraint firstAttribute="width" constant="40" id="vnD-xP-30p"/>
+                        <constraint firstAttribute="height" constant="60" id="g8D-IB-9Tw"/>
                     </constraints>
-                </activityIndicatorView>
+                </imageView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-GZ-7Ts">
                     <rect key="frame" x="165" y="358" width="45" height="45"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="45" id="15D-m7-nZj"/>
                         <constraint firstAttribute="height" constant="45" id="xwC-we-a7y"/>
+                    </constraints>
+                </activityIndicatorView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-DA-4ox">
+                    <rect key="frame" x="168" y="358" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5gu-pk-4Bw"/>
+                        <constraint firstAttribute="width" constant="40" id="vnD-xP-30p"/>
                     </constraints>
                 </activityIndicatorView>
             </subviews>
@@ -77,11 +83,15 @@
                 <constraint firstItem="g53-R3-a1Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GDc-pg-ccf"/>
                 <constraint firstItem="9TV-tX-Spg" firstAttribute="top" secondItem="VD5-mf-6rr" secondAttribute="bottom" constant="8" id="GPA-mm-IFo"/>
                 <constraint firstItem="9TV-tX-Spg" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Mal-NQ-q2r"/>
+                <constraint firstItem="tGM-0t-ILf" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="Sq2-xS-I4h"/>
                 <constraint firstItem="WhL-GZ-7Ts" firstAttribute="top" secondItem="9TV-tX-Spg" secondAttribute="bottom" constant="15" id="XAL-Qk-NeR"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="tGM-0t-ILf" secondAttribute="trailing" constant="30" id="aV2-FA-fLE"/>
                 <constraint firstItem="VD5-mf-6rr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="25" id="dqp-lr-gqg"/>
                 <constraint firstItem="VD5-mf-6rr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kEn-7Y-uwD"/>
                 <constraint firstItem="hrV-DA-4ox" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kXZ-0Z-LnD"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="VD5-mf-6rr" secondAttribute="trailing" constant="25" id="rjB-N4-1Le"/>
+                <constraint firstItem="tGM-0t-ILf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ud9-J2-x1M"/>
+                <constraint firstItem="VD5-mf-6rr" firstAttribute="top" secondItem="tGM-0t-ILf" secondAttribute="bottom" constant="30" id="xbN-SF-MOI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <variation key="default">
@@ -92,4 +102,7 @@
             <point key="canvasLocation" x="132" y="152.47376311844079"/>
         </view>
     </objects>
+    <resources>
+        <image name="Image" width="1014" height="250"/>
+    </resources>
 </document>
