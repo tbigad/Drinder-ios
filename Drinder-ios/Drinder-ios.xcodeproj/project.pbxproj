@@ -38,6 +38,7 @@
 		F3559BE924D5F3A5001C08EC /* SearchAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BE824D5F3A5001C08EC /* SearchAssembly.m */; };
 		F3559BEC24D5F3E3001C08EC /* MoreAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BEB24D5F3E3001C08EC /* MoreAssembly.m */; };
 		F3559BEF24D6C250001C08EC /* SearchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BEE24D6C250001C08EC /* SearchInteractor.m */; };
+		F3559BF524D6D964001C08EC /* UserDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BF424D6D964001C08EC /* UserDetailsInfo.m */; };
 		F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526C224D498E0007DCAED /* AppDelegate.m */; };
 		F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CD24D498E5007DCAED /* Assets.xcassets */; };
 		F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CF24D498E6007DCAED /* LaunchScreen.storyboard */; };
@@ -108,6 +109,8 @@
 		F3559BEB24D5F3E3001C08EC /* MoreAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreAssembly.m; sourceTree = "<group>"; };
 		F3559BED24D6C250001C08EC /* SearchInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchInteractor.h; sourceTree = "<group>"; };
 		F3559BEE24D6C250001C08EC /* SearchInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchInteractor.m; sourceTree = "<group>"; };
+		F3559BF324D6D964001C08EC /* UserDetailsInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDetailsInfo.h; sourceTree = "<group>"; };
+		F3559BF424D6D964001C08EC /* UserDetailsInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDetailsInfo.m; sourceTree = "<group>"; };
 		F3C526BE24D498E0007DCAED /* Drinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C526C124D498E0007DCAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3C526C224D498E0007DCAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 			children = (
 				F32EE99424D560180042FFFA /* UserDataModel.h */,
 				F32EE99524D560180042FFFA /* UserDataModel.m */,
+				F3559BF324D6D964001C08EC /* UserDetailsInfo.h */,
+				F3559BF424D6D964001C08EC /* UserDetailsInfo.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				F3559BEC24D5F3E3001C08EC /* MoreAssembly.m in Sources */,
 				F32EE99A24D56F470042FFFA /* RegistrationViewController.m in Sources */,
 				9B78E4E224D5B9CC00141277 /* MoreViewController.m in Sources */,
+				F3559BF524D6D964001C08EC /* UserDetailsInfo.m in Sources */,
 				F339AA2E24D4D76100A6679B /* RootCoordinator.m in Sources */,
 				9B78E4ED24D602B100141277 /* SearchTableViewCell.m in Sources */,
 			);
