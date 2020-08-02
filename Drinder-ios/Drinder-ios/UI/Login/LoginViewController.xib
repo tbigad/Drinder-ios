@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="activityIndicator" destination="hrV-DA-4ox" id="sDU-kx-89L"/>
                 <outlet property="emailTextField" destination="PeT-FV-6rh" id="gdy-jn-wF7"/>
                 <outlet property="heightConstraint" destination="4yh-HU-Y5D" id="IyF-M4-eMy"/>
                 <outlet property="passwordTextField" destination="5pG-OQ-2YC" id="1Q7-RQ-YPV"/>
@@ -52,19 +53,42 @@
                         <action selector="didTappedRegistrationButton:" destination="-1" eventType="touchUpInside" id="FEF-i3-xz6"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-DA-4ox">
+                    <rect key="frame" x="167.5" y="358" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5gu-pk-4Bw"/>
+                        <constraint firstAttribute="width" constant="40" id="vnD-xP-30p"/>
+                    </constraints>
+                </activityIndicatorView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-GZ-7Ts">
+                    <rect key="frame" x="165" y="358" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="15D-m7-nZj"/>
+                        <constraint firstAttribute="height" constant="45" id="xwC-we-a7y"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="WhL-GZ-7Ts" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1VF-aE-KHx"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="g53-R3-a1Y" secondAttribute="bottom" constant="20" id="4yh-HU-Y5D"/>
                 <constraint firstItem="VD5-mf-6rr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.8" id="7uJ-gY-l0f"/>
+                <constraint firstItem="hrV-DA-4ox" firstAttribute="top" secondItem="9TV-tX-Spg" secondAttribute="bottom" constant="15" id="AR9-Xk-X9P"/>
                 <constraint firstItem="g53-R3-a1Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GDc-pg-ccf"/>
                 <constraint firstItem="9TV-tX-Spg" firstAttribute="top" secondItem="VD5-mf-6rr" secondAttribute="bottom" constant="8" id="GPA-mm-IFo"/>
                 <constraint firstItem="9TV-tX-Spg" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Mal-NQ-q2r"/>
+                <constraint firstItem="WhL-GZ-7Ts" firstAttribute="top" secondItem="9TV-tX-Spg" secondAttribute="bottom" constant="15" id="XAL-Qk-NeR"/>
                 <constraint firstItem="VD5-mf-6rr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="25" id="dqp-lr-gqg"/>
                 <constraint firstItem="VD5-mf-6rr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kEn-7Y-uwD"/>
+                <constraint firstItem="hrV-DA-4ox" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kXZ-0Z-LnD"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="VD5-mf-6rr" secondAttribute="trailing" constant="25" id="rjB-N4-1Le"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="WhL-GZ-7Ts"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="132" y="152.47376311844079"/>
         </view>
     </objects>

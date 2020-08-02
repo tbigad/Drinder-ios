@@ -14,6 +14,9 @@
 @property (nonatomic, strong)LoginInteractor* loginInteractor;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+
 @end
 
 @implementation LoginViewController
@@ -47,17 +50,23 @@
 
 - (IBAction)didTappedLoginButton:(UIButton *)sender {
     __weak typeof(self)weakSelf = self;
+     [self.activityIndicator startAnimating];
     self.loginInteractor.login = self.emailTextField.text;
     self.loginInteractor.password = self.passwordTextField.text;
     [self.loginInteractor didTapLoginWithComplition:^(UserInfoSession *userInfo, NSString * message) {
         dispatch_async(dispatch_get_main_queue(), ^{
+               
             if (userInfo) {
                 weakSelf.loginSuccess(userInfo);
+                [self.activityIndicator stopAnimating];
             } else {
                 [weakSelf showError:@"Login error" Text:message];
+                    
             }
         });
     }];
+    
+    [self.activityIndicator stopAnimating];
 }
 
 
