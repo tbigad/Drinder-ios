@@ -20,6 +20,8 @@
 		F32E490924D71E310076EC29 /* MoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F32E490724D71E310076EC29 /* MoreTableViewCell.m */; };
 		F32E490A24D71E310076EC29 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32E490824D71E310076EC29 /* MoreTableViewCell.xib */; };
 		F32E491024D72C650076EC29 /* GetDetailsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F32E490F24D72C650076EC29 /* GetDetailsOperation.m */; };
+		F32E491924D76BCB0076EC29 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32E491724D76BCB0076EC29 /* UserDetailsViewController.m */; };
+		F32E491A24D76BCB0076EC29 /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32E491824D76BCB0076EC29 /* UserDetailsViewController.xib */; };
 		F32EE98F24D55BBF0042FFFA /* LoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE98E24D55BBF0042FFFA /* LoginInteractor.m */; };
 		F32EE99224D55BD50042FFFA /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99124D55BD50042FFFA /* Interactor.m */; };
 		F32EE99624D560180042FFFA /* UserDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EE99524D560180042FFFA /* UserDataModel.m */; };
@@ -83,6 +85,9 @@
 		F32E490824D71E310076EC29 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
 		F32E490E24D72C650076EC29 /* GetDetailsOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetDetailsOperation.h; sourceTree = "<group>"; };
 		F32E490F24D72C650076EC29 /* GetDetailsOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetDetailsOperation.m; sourceTree = "<group>"; };
+		F32E491624D76BCB0076EC29 /* UserDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
+		F32E491724D76BCB0076EC29 /* UserDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
+		F32E491824D76BCB0076EC29 /* UserDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsViewController.xib; sourceTree = "<group>"; };
 		F32EE98D24D55BBF0042FFFA /* LoginInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginInteractor.h; sourceTree = "<group>"; };
 		F32EE98E24D55BBF0042FFFA /* LoginInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginInteractor.m; sourceTree = "<group>"; };
 		F32EE99024D55BD50042FFFA /* Interactor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interactor.h; sourceTree = "<group>"; };
@@ -237,6 +242,16 @@
 				F32E490824D71E310076EC29 /* MoreTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F32E491524D76B960076EC29 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F32E491624D76BCB0076EC29 /* UserDetailsViewController.h */,
+				F32E491724D76BCB0076EC29 /* UserDetailsViewController.m */,
+				F32E491824D76BCB0076EC29 /* UserDetailsViewController.xib */,
+			);
+			path = UserDetails;
 			sourceTree = "<group>";
 		};
 		F32EE98C24D55B9F0042FFFA /* Interactor */ = {
@@ -400,6 +415,7 @@
 		F3C526DA24D4BCE3007DCAED /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F32E491524D76B960076EC29 /* UserDetails */,
 				9B78E4F224D75CAC00141277 /* Edit */,
 				9B78E4E424D6004500141277 /* Search */,
 				9B78E4D724D5B9CC00141277 /* More */,
@@ -505,6 +521,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32E491A24D76BCB0076EC29 /* UserDetailsViewController.xib in Resources */,
 				F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */,
 				F32E490124D71DD80076EC29 /* SearchTableViewCell.xib in Resources */,
 				9B78E4E124D5B9CC00141277 /* MoreViewController.xib in Resources */,
@@ -577,6 +594,7 @@
 				F32EE99E24D56F690042FFFA /* RegistrationInteractor.m in Sources */,
 				F32EE9A324D57F320042FFFA /* BackendAPIHelper.m in Sources */,
 				F3C526E724D4C3F3007DCAED /* Coordinator.m in Sources */,
+				F32E491924D76BCB0076EC29 /* UserDetailsViewController.m in Sources */,
 				F3559C1324D70C2B001C08EC /* PostLocationOperation.m in Sources */,
 				F32EE9B024D5A7220042FFFA /* TabCoordinator.m in Sources */,
 				F3C526D424D498E6007DCAED /* main.m in Sources */,
