@@ -24,7 +24,7 @@
         _userInfo = session;
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-        [_locationManager startUpdatingLocation];
+        //[_locationManager startUpdatingLocation];
         _queue = [NSOperationQueue new];
         [self.locationManager setDelegate:self];
         [self checkLocationAuthorization];
@@ -104,7 +104,7 @@
 }
 
 -(CLLocationCoordinate2D)userCoordinate {
-    return self.userInfo.detailsInfo.coordinate;
+    return [self.userInfo.detailsInfo getLocation];
 }
 
 - (void) requestInfo {
@@ -133,7 +133,8 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     CLLocation * location = [locations.firstObject copy];
-    self.userInfo.detailsInfo.coordinate = location.coordinate;
+    CLLocationCoordinate2D coordinate = {location.coordinate.latitude,location.coordinate.longitude};
+    [self.userInfo.detailsInfo setLocation:coordinate];
     [self requestInfo];
 }
 

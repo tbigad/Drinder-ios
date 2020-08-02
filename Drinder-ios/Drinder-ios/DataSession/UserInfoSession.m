@@ -23,6 +23,7 @@
         
         _password = pass;
         _userData = userDataModel;
+        _detailsInfo = [UserDetailsInfo new];
     }
     return self;
 }

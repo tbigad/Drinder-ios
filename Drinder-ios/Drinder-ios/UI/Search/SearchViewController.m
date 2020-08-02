@@ -41,7 +41,9 @@
     
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];}
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.mapKitView setUserTrackingMode:MKUserTrackingModeFollow];
+}
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -85,8 +87,15 @@
 
 #pragma mark - Methods from inteactor
 -(void) fillMap {
-    [self.mapKitView setCenterCoordinate: [self.searchInteractor userCoordinate] animated:YES];
+    CLLocationCoordinate2D center = [self.searchInteractor userCoordinate];
+    [self.mapKitView setCenterCoordinate:center animated:YES];
     [self.mapKitView addAnnotations:self.searchInteractor.mapAnatation];
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    region.center = center;
+    span.latitudeDelta = 2.0;
+    span.longitudeDelta = 2.0;
+    [self.mapKitView setRegion:region];
 }
 
 
