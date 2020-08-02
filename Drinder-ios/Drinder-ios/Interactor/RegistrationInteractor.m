@@ -27,6 +27,7 @@
 - (void)didTapRegistrationWithComplition:(void (^)(UserInfoSession *, NSString *))complition {
     if (![self isValidRegistrationData]) {
         complition(nil,@"User name or password incorrect");
+        return;
     }
     
     [BackendAPIHelper registrationWith:self.userName password:self.firstPassword complition:^(NSData * _Nonnull data, NSError * _Nonnull error) {
