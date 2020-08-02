@@ -8,10 +8,12 @@
 
 #import "Interactor.h"
 #import "UserInfoSession.h"
+#import <CoreLocation/CoreLocation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchInteractor : Interactor
+@property (nonatomic, copy, nullable) void (^showErrorMessage)(NSString* title, NSString* message);
 
 - (instancetype)initWithUserInfoSession:(UserInfoSession*)session;
 @end
