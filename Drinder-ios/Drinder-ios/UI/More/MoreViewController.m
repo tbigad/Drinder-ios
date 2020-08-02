@@ -25,12 +25,13 @@
        self.tableView.delegate = self;
        self.tableView.dataSource = self;
        [self.tableView registerNib:[UINib nibWithNibName:[MoreTableViewCell reusableId] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[MoreTableViewCell reusableId]];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
        [self.view addSubview:self.tableView];
        [NSLayoutConstraint activateConstraints:@[
-           [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
-           [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:250],
-           [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
-           [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant: - 80]
+           [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor],
+           [self.tableView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:100],
+           [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor],
+           [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor]
        ]];
 }
 #pragma mark - UITableViewDataSource
