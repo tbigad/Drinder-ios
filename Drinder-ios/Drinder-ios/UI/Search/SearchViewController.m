@@ -22,6 +22,9 @@
     self = [super init];
     if (self) {
         _searchInteractor = interactor;
+        _searchInteractor.showErrorMessage = ^(NSString * _Nonnull title, NSString * _Nonnull message) {
+            NSLog(@"%@ %@",title,message);
+        };
     }
     return self;
 }
