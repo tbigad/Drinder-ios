@@ -49,9 +49,9 @@
 }
 
 - (BOOL) isValidRegistrationData {
-    if (self.userName.length >= 8 && self.firstPassword.length >= 3 && [self.firstPassword isEqualToString:self.repeatPassword] && self.overEighteen) {
-        return NO;
+    if ( (self.userName.length >= 8) && (self.firstPassword.length >= 3) && [self.firstPassword isEqualToString:self.repeatPassword] && self.overEighteen) {
+        return YES;
     }
-    return YES;
+    return NO;
 }
 @end
