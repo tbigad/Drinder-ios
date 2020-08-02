@@ -10,10 +10,11 @@
 #import "SearchTableViewCell.h"
 #import "MapKit/MapKit.h"
 
-@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate>
+@property (strong, nonatomic) MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) SearchInteractor* searchInteractor;
+//@property (nonatomic, strong)
 @end
 
 @implementation SearchViewController
@@ -32,6 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
        [self.tableView registerNib:[UINib nibWithNibName:[SearchTableViewCell reusableId] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[SearchTableViewCell reusableId]];
+    [self setUpHeader];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
 #pragma mark - UITableViewDataSource
@@ -48,4 +54,13 @@
 
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+- (void)setUpHeader {
+    self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width)];
+    self.tableView.tableHeaderView = self.mapView;
+}
 @end
+

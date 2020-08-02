@@ -161,7 +161,6 @@
 		9B78E4D724D5B9CC00141277 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				9B78E4D824D5B9CC00141277 /* Cells */,
 				9B78E4DC24D5B9CC00141277 /* MoreViewController.xib */,
 				9B78E4DE24D5B9CC00141277 /* MoreViewController.h */,
 				9B78E4DD24D5B9CC00141277 /* MoreViewController.m */,
@@ -321,6 +320,7 @@
 		F3C526DA24D4BCE3007DCAED /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9B78E4D824D5B9CC00141277 /* Cells */,
 				9B78E4E424D6004500141277 /* Search */,
 				9B78E4D724D5B9CC00141277 /* More */,
 				F3C526DC24D4BE75007DCAED /* Registration */,

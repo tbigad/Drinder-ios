@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
             <connections>
+                <outlet property="tableView" destination="JRH-gT-hmc" id="WKY-xd-8Po"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,26 +19,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="55w-Xe-jn4">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="390" id="pgI-Bp-x5e"/>
-                    </constraints>
-                </mapView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7u8-IP-FE6">
-                    <rect key="frame" x="0.0" y="384" width="414" height="494"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JRH-gT-hmc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="7u8-IP-FE6" firstAttribute="top" secondItem="55w-Xe-jn4" secondAttribute="bottom" constant="8" id="1ON-jG-gii"/>
-                <constraint firstItem="55w-Xe-jn4" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="1e7-Fg-9UD"/>
-                <constraint firstItem="55w-Xe-jn4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2da-Lv-HbG"/>
-                <constraint firstItem="55w-Xe-jn4" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="NS8-xX-bcd"/>
-                <constraint firstItem="7u8-IP-FE6" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="PY9-Ma-48N"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="7u8-IP-FE6" secondAttribute="bottom" constant="-16" id="Pa9-Cf-ox0"/>
-                <constraint firstItem="7u8-IP-FE6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="lQG-ch-iWA"/>
+                <constraint firstItem="JRH-gT-hmc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="1nl-Wq-4kG"/>
+                <constraint firstItem="JRH-gT-hmc" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="53m-eR-Dtm"/>
+                <constraint firstItem="JRH-gT-hmc" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="UGN-ZW-i6I"/>
+                <constraint firstItem="JRH-gT-hmc" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="cIp-ln-OQ8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
