@@ -25,14 +25,11 @@
 
 - (void)main {
     self.queue.maxConcurrentOperationCount = 1;
-    
+    __weak typeof(self)wealSelf = self;
     PostLocationOperation* postLocation = [[PostLocationOperation alloc] initWithSession:self.userSession];
-    [postLocation setCompletionBlock:^{
-        //
-    }];
     GetNearestUsersLocation *getNearest = [[GetNearestUsersLocation alloc] initWithSession:self.userSession];
-    [getNearest setCompletionBlock:^{
-        //
+    [getNearest setResultingData:^(NSArray<NearestUserData *> * data) {
+        wealSelf.resultingData(data);
     }];
     [self.queue addOperations:@[postLocation, getNearest] waitUntilFinished:YES];
     [self finish];

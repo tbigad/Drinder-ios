@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AfterLoginGetInfoOperation : AsyncOperation
 - (instancetype)initWithUserSession:(UserInfoSession*)session;
+@property (nonatomic, copy, nullable) void (^resultingData)(NSArray<NearestUserData*>* resultData);
 @end
 
 NS_ASSUME_NONNULL_END

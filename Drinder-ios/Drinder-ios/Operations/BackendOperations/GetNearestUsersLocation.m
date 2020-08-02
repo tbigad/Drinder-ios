@@ -25,6 +25,17 @@
 - (void)main {
     __weak typeof(self)wealSelf = self;
     [BackendAPIHelper findNearestWithUser:self.userSession complition:^(NSData *data, NSError *error) {
+        
+        NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSMutableArray<NearestUserData*> *nearest = [NSMutableArray new];
+        
+        for (NSDictionary *user in jsonDict) {
+            NearestUserData *nearestUser = [[NearestUserData alloc] initWithLocationJSONDataDictionary:user];
+            if(nearestUser) {
+                [nearest addObject:nearestUser];
+            }
+        }
+        wealSelf.resultingData([nearest copy]);
         [wealSelf finish];
     }];
 }

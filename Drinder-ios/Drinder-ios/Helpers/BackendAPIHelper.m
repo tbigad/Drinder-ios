@@ -119,4 +119,22 @@ static NSString* baseURL = @"https://hackaton-web-server.herokuapp.com";
     }];
     [task resume];
 }
+
++ (void)getDetails:(NSString *)userID complition:(void (^)(NSData *, NSError *))handler {
+    NSURLQueryItem *userId = [[NSURLQueryItem alloc] initWithName:@"id" value:userID];
+    
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURL];
+    components.path = @"/detail";
+    components.queryItems = @[userId];
+    NSURL *url = components.URL;
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error) {
+            handler(nil, error);
+            return;
+        }
+        handler(data, error);
+    }];
+    [task resume];
+}
 @end

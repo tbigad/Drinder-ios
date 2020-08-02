@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString* userID;
 @property (nonatomic, strong)CLLocation *location;
 
--(instancetype)initWithJSONDataDictionary:(NSDictionary*)dictionary;
 @end
 
 NS_ASSUME_NONNULL_END

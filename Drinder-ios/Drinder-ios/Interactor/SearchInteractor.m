@@ -13,6 +13,7 @@
 @property (weak) UserInfoSession *userInfo;
 @property CLLocationManager *locationManager;
 @property (nonatomic, strong)NSOperationQueue *queue;
+@property (nonatomic, strong) NSArray<NearestUserData*> *nearestUsers;
 @end
 
 @implementation SearchInteractor
@@ -25,8 +26,24 @@
         _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
         _queue = [NSOperationQueue new];
         [self.locationManager setDelegate:self];
+        [self checkLocationAuthorization];
     }
     return self;
+}
+
+- (void) checkLocationAuthorization {
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+        case kCLAuthorizationStatusRestricted:
+        case kCLAuthorizationStatusDenied:
+            [self.locationManager requestWhenInUseAuthorization];
+            break;
+        case kCLAuthorizationStatusAuthorizedAlways:
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            [self requestLocation];
+            break;
+    }
 }
 
 - (void) requestLocation {
@@ -37,10 +54,16 @@
     
 }
 
+- (void) nearestUsersUpdated {
+    
+}
+
 - (void) requestInfo {
     AfterLoginGetInfoOperation *operation = [[AfterLoginGetInfoOperation alloc] initWithUserSession:self.userInfo];
-    [operation setCompletionBlock:^{
-        NSLog(@"AfterLoginGetInfoOperation");
+    __weak typeof(self)wealSelf = self;
+    [operation setResultingData:^(NSArray<NearestUserData *> * _Nonnull resultData) {
+        wealSelf.nearestUsers = resultData;
+        [wealSelf nearestUsersUpdated];
     }];
     [self.queue addOperation:operation];
 }
@@ -50,11 +73,11 @@
         case kCLAuthorizationStatusNotDetermined:
         case kCLAuthorizationStatusDenied:
         case kCLAuthorizationStatusRestricted:
-            [self.locationManager requestWhenInUseAuthorization];
+            //
             break;
         case kCLAuthorizationStatusAuthorizedAlways:
         case kCLAuthorizationStatusAuthorizedWhenInUse:
-            [self.locationManager requestLocation];
+            [self requestLocation];
             break;
     }
 }
