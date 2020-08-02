@@ -11,7 +11,7 @@
 #import "MapKit/MapKit.h"
 
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate>
-@property (strong, nonatomic) MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet MKMapView *mapKitView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) SearchInteractor* searchInteractor;
 //@property (nonatomic, strong)
@@ -32,35 +32,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-       [self.tableView registerNib:[UINib nibWithNibName:[SearchTableViewCell reusableId] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[SearchTableViewCell reusableId]];
-    [self setUpHeader];
+    [self.tableView registerNib:[UINib nibWithNibName:[SearchTableViewCell reusableId] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[SearchTableViewCell reusableId]];
+    
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-   return 4;
-    
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[SearchTableViewCell reusableId] forIndexPath:indexPath];
-
+    [cell.titleTextLabel setText:@"Title"];
+    [cell.detailTextLabel setText:@"Description"];
     return cell;
-
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
 }
 
-- (void)setUpHeader {
-    self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width)];
-    self.tableView.tableHeaderView = self.mapView;
-}
+
 @end
 
