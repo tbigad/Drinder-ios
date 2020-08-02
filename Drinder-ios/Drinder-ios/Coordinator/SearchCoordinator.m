@@ -28,6 +28,9 @@
 
 - (void) showSearch {
     SearchViewController *searchViewController = [SearchAssembly makeSearchWithWith:self.userInfoSession];
+    searchViewController.showDetail = ^(NearestUserData * _Nonnull nearesUser) {
+        ///
+    };
     [self setFirstViewController:searchViewController];
 }
 

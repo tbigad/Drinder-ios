@@ -7,7 +7,6 @@
 //
 
 #import "SearchInteractor.h"
-#import "AfterLoginGetInfoOperation.h"
 
 @interface SearchInteractor() <CLLocationManagerDelegate>
 @property (weak) UserInfoSession *userInfo;
@@ -24,10 +23,8 @@
         _userInfo = session;
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
-        //[_locationManager startUpdatingLocation];
         _queue = [NSOperationQueue new];
         [self.locationManager setDelegate:self];
-        [self checkLocationAuthorization];
     }
     return self;
 }
@@ -57,7 +54,7 @@
 
 - (void) nearestUsersUpdated {
     NSMutableArray<MKPointAnnotation*>* anotations = [NSMutableArray<MKPointAnnotation*> new];
-    for (NearestUserData* user in self.nearestUsers) {
+    for (NearestUserData* user in self.nearestUsers) {        
         MKPointAnnotation* anotation = [[MKPointAnnotation alloc] init];
         [anotation setCoordinate:user.location.location.coordinate];
         [anotation setTitle:user.userName];
@@ -140,6 +137,11 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     self.showErrorMessage(@"Location error", error.localizedDescription);
+}
+
+- (NearestUserData*)didTapOnAnototation:(MKPointAnnotation*)anotation {
+    NSUInteger index = [self.mapAnatation indexOfObject:anotation];
+    return [self.nearestUsers objectAtIndex:index];
 }
 
 @end

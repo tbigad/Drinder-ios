@@ -43,12 +43,18 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self.mapKitView setUserTrackingMode:MKUserTrackingModeFollow];
     [self.mapKitView setScrollEnabled:NO];
+    [self.mapKitView setDelegate:self];
+    [self.mapKitView registerClass:[MKMarkerAnnotationView class] forAnnotationViewWithReuseIdentifier:NSStringFromClass([MKMarkerAnnotationView class])];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.searchInteractor checkLocationAuthorization];
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -92,6 +98,22 @@
     [self.mapKitView addAnnotations:self.searchInteractor.mapAnatation];
 }
 
+#pragma mark - MapKit Delegate
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    MKMarkerAnnotationView *marker = (MKMarkerAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([MKMarkerAnnotationView class])];
+    [marker setAnimatesWhenAdded:YES];
+    [marker setCanShowCallout:YES];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    marker.rightCalloutAccessoryView = btn;
+    return marker;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    if([view.annotation isKindOfClass:[MKPointAnnotation class]]) {
+        MKPointAnnotation *tapped = (MKPointAnnotation*)view.annotation;
+        [self.searchInteractor didTapOnAnototation:tapped];
+    }
+}
 @end
 

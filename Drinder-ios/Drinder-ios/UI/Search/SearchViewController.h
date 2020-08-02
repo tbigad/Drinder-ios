@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchViewController : ViewController
+@property (nonatomic, copy, nullable) void (^showDetail)(NearestUserData* nearesUser);
 - (instancetype)initWithInteractor:(SearchInteractor*)interactor;
 @end
 
