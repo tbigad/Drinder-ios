@@ -32,11 +32,13 @@
     SearchCoordinator *searchCoordinator = [SearchAssembly makeSearchCoordinatorWith:self.userInfoSession andParent:self];
     UITabBarItem* searchTabItem = [[UITabBarItem alloc]initWithTitle:nil image:[UIImage imageNamed:@"wine"] tag:0];
     searchCoordinator.baseViewController.tabBarItem = searchTabItem;
+    searchTabItem.imageInsets = UIEdgeInsetsMake(17, 0, -17, 0);
     [self addTabbedCoordinator:searchCoordinator];
     
     MoreCoordinator *moreCoordinator = [MoreAssembly makeMoreCoordinatorWithParent:self];
     UITabBarItem* moreTabItem = [[UITabBarItem alloc]initWithTitle:nil image:[UIImage imageNamed:@"more"] tag:1];
     moreCoordinator.baseViewController.tabBarItem = moreTabItem;
+    moreTabItem.imageInsets = UIEdgeInsetsMake(17, 0, -17, 0);
     [self addTabbedCoordinator:moreCoordinator];
 }
 
