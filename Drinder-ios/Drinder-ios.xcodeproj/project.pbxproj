@@ -12,8 +12,8 @@
 		9B78E4E224D5B9CC00141277 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78E4DD24D5B9CC00141277 /* MoreViewController.m */; };
 		9B78E4E824D600B500141277 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78E4E624D600B500141277 /* SearchViewController.m */; };
 		9B78E4E924D600B500141277 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78E4E724D600B500141277 /* SearchViewController.xib */; };
-		9B78E4F624D75CED00141277 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78E4F424D75CED00141277 /* DetailViewController.m */; };
-		9B78E4F724D75CED00141277 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78E4F524D75CED00141277 /* DetailViewController.xib */; };
+		9B78E4F624D75CED00141277 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B78E4F424D75CED00141277 /* EditViewController.m */; };
+		9B78E4F724D75CED00141277 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B78E4F524D75CED00141277 /* EditViewController.xib */; };
 		EF84320EAB7CB451CAEEE201 /* Pods_Drinder_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C210F970F6FF0B3C187140C /* Pods_Drinder_ios.framework */; };
 		F32E490124D71DD80076EC29 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F32E48FC24D71DD80076EC29 /* SearchTableViewCell.xib */; };
 		F32E490224D71DD80076EC29 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F32E48FD24D71DD80076EC29 /* SearchTableViewCell.m */; };
@@ -71,9 +71,9 @@
 		9B78E4E524D600B500141277 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		9B78E4E624D600B500141277 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		9B78E4E724D600B500141277 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		9B78E4F324D75CED00141277 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		9B78E4F424D75CED00141277 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		9B78E4F524D75CED00141277 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		9B78E4F324D75CED00141277 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		9B78E4F424D75CED00141277 /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		9B78E4F524D75CED00141277 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		CDB13A0031578100D46B8D6F /* Pods-Drinder-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drinder-ios.release.xcconfig"; path = "Target Support Files/Pods-Drinder-ios/Pods-Drinder-ios.release.xcconfig"; sourceTree = "<group>"; };
 		F32E48FC24D71DD80076EC29 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		F32E48FD24D71DD80076EC29 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
@@ -209,14 +209,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		9B78E4F224D75CAC00141277 /* Detail */ = {
+		9B78E4F224D75CAC00141277 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
-				9B78E4F324D75CED00141277 /* DetailViewController.h */,
-				9B78E4F424D75CED00141277 /* DetailViewController.m */,
-				9B78E4F524D75CED00141277 /* DetailViewController.xib */,
+				9B78E4F324D75CED00141277 /* EditViewController.h */,
+				9B78E4F424D75CED00141277 /* EditViewController.m */,
+				9B78E4F524D75CED00141277 /* EditViewController.xib */,
 			);
-			path = Detail;
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		F32E48FA24D71DD80076EC29 /* Cells */ = {
@@ -400,7 +400,7 @@
 		F3C526DA24D4BCE3007DCAED /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9B78E4F224D75CAC00141277 /* Detail */,
+				9B78E4F224D75CAC00141277 /* Edit */,
 				9B78E4E424D6004500141277 /* Search */,
 				9B78E4D724D5B9CC00141277 /* More */,
 				F3C526DC24D4BE75007DCAED /* Registration */,
@@ -509,7 +509,7 @@
 				F32E490124D71DD80076EC29 /* SearchTableViewCell.xib in Resources */,
 				9B78E4E124D5B9CC00141277 /* MoreViewController.xib in Resources */,
 				F32EE99B24D56F470042FFFA /* RegistrationViewController.xib in Resources */,
-				9B78E4F724D75CED00141277 /* DetailViewController.xib in Resources */,
+				9B78E4F724D75CED00141277 /* EditViewController.xib in Resources */,
 				F32E490A24D71E310076EC29 /* MoreTableViewCell.xib in Resources */,
 				F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */,
 				F3C526E424D4BFBB007DCAED /* LoginViewController.xib in Resources */,
@@ -568,7 +568,7 @@
 				F32EE9AD24D5A2840042FFFA /* UserInfoSession.m in Sources */,
 				F3559BEF24D6C250001C08EC /* SearchInteractor.m in Sources */,
 				F32EE9A624D580400042FFFA /* UserDefaultsHelper.m in Sources */,
-				9B78E4F624D75CED00141277 /* DetailViewController.m in Sources */,
+				9B78E4F624D75CED00141277 /* EditViewController.m in Sources */,
 				F3559BE924D5F3A5001C08EC /* SearchAssembly.m in Sources */,
 				F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */,
 				F339AA2724D4D27000A6679B /* Assembly.m in Sources */,

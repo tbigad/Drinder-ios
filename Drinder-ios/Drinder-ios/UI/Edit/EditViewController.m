@@ -6,13 +6,13 @@
 //  Copyright © 2020 Pavel N. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "EditViewController.h"
 
-@interface DetailViewController ()
+@interface  EditViewController  ()
 
 @end
 
-@implementation DetailViewController
+@implementation  EditViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
