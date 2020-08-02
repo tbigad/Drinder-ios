@@ -112,7 +112,10 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     if([view.annotation isKindOfClass:[MKPointAnnotation class]]) {
         MKPointAnnotation *tapped = (MKPointAnnotation*)view.annotation;
-        [self.searchInteractor didTapOnAnototation:tapped];
+        NearestUserData* user = [self.searchInteractor didTapOnAnototation:tapped];
+        if(user){
+            self.showDetail(user);
+        }
     }
 }
 @end

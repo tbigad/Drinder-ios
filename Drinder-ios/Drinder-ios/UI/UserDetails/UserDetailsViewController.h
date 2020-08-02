@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "NearestUserData.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserDetailsViewController : ViewController
-
+- (instancetype)initWithNearesUserData:(NearestUserData*)data;
 @end
 
 NS_ASSUME_NONNULL_END

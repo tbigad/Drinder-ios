@@ -7,9 +7,11 @@
 //
 
 #import "UserDetailsViewController.h"
-#import "NearestUserData.h"
 
 @interface UserDetailsViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *labelTitle;
+@property (strong, nonatomic) IBOutlet UILabel *genderLabel;
+@property (strong, nonatomic) IBOutlet UILabel *alcohol;
 @property (nonatomic, weak) NearestUserData* userData;
 @end
 
@@ -26,7 +28,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController.navigationBar setPrefersLargeTitles:YES];
+    [self setTitle:self.userData.userName];
+    [self.labelTitle setText:[NSString stringWithFormat:@"%@, %d",self.userData.userName, [self.userData.age intValue]]];
+    [self.genderLabel setText:[NSString stringWithFormat:@"%@",self.userData.gender]];
+    [self.alcohol setText:[NSString stringWithFormat:@"I preferred: %@",self.userData.alcohol]];
 }
 
 /*

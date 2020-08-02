@@ -10,12 +10,14 @@
 #import "SearchCoordinator.h"
 #import "UserInfoSession.h"
 #import "SearchViewController.h"
+#import "UserDetailsViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchAssembly : Assembly
 + (SearchCoordinator*) makeSearchCoordinatorWith:(UserInfoSession*)session andParent:(Coordinator*)parent;
 + (SearchViewController*) makeSearchWithWith:(UserInfoSession*)userInfo;
++ (UserDetailsViewController*) makeUserDetailsWith:(NearestUserData*)data;
 @end
 
 NS_ASSUME_NONNULL_END

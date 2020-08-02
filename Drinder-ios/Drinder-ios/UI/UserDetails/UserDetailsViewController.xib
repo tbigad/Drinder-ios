@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserDetailsViewController">
             <connections>
+                <outlet property="alcohol" destination="xwJ-pg-i26" id="0Qg-ob-gQF"/>
+                <outlet property="genderLabel" destination="vBq-5x-0qK" id="KLM-Bp-Sga"/>
+                <outlet property="labelTitle" destination="ZlX-66-AiV" id="WGB-Uc-R0g"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +20,52 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Vg4-iw-ylF">
+                    <rect key="frame" x="67.5" y="20" width="240" height="151"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Vg4-iw-ylF" secondAttribute="height" multiplier="240:151" id="agj-0d-vAl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlX-66-AiV">
+                    <rect key="frame" x="147.5" y="179" width="80.5" height="41"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gjg-gg-iMp">
+                    <rect key="frame" x="16" y="220" width="42" height="49"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBq-5x-0qK">
+                            <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwJ-pg-i26">
+                            <rect key="frame" x="0.0" y="28.5" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ZlX-66-AiV" firstAttribute="top" secondItem="Vg4-iw-ylF" secondAttribute="bottom" constant="8" id="2yK-U1-TDL"/>
+                <constraint firstItem="gjg-gg-iMp" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="44f-eV-n7V"/>
+                <constraint firstItem="Vg4-iw-ylF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JyV-MI-rvU"/>
+                <constraint firstItem="gjg-gg-iMp" firstAttribute="top" secondItem="ZlX-66-AiV" secondAttribute="bottom" id="WtW-8f-0sl"/>
+                <constraint firstItem="Vg4-iw-ylF" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.64" id="a3N-Hb-FS5"/>
+                <constraint firstItem="Vg4-iw-ylF" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="g06-lO-Zis"/>
+                <constraint firstItem="ZlX-66-AiV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xgG-0V-lw7"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="120.8" y="112.89355322338831"/>
         </view>
     </objects>
+    <resources>
+        <image name="default_avatar" width="447" height="480"/>
+    </resources>
 </document>

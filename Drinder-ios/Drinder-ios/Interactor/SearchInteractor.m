@@ -141,7 +141,10 @@
 
 - (NearestUserData*)didTapOnAnototation:(MKPointAnnotation*)anotation {
     NSUInteger index = [self.mapAnatation indexOfObject:anotation];
-    return [self.nearestUsers objectAtIndex:index];
+    if(index != NSNotFound) {
+        return [self.nearestUsers objectAtIndex:index];
+    }
+    return nil;
 }
 
 @end

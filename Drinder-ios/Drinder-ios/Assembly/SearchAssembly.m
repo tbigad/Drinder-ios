@@ -21,4 +21,8 @@
 + (SearchInteractor*) makeSearchInteractorWith:(UserInfoSession*)userInfo {
     return [[SearchInteractor alloc] initWithUserInfoSession:userInfo];
 }
+
++ (UserDetailsViewController *)makeUserDetailsWith:(NearestUserData *)data {
+    return [[UserDetailsViewController alloc] initWithNearesUserData:data];
+}
 @end

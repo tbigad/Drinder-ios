@@ -28,10 +28,16 @@
 
 - (void) showSearch {
     SearchViewController *searchViewController = [SearchAssembly makeSearchWithWith:self.userInfoSession];
+    __weak typeof(self)weakSelf = self;
     searchViewController.showDetail = ^(NearestUserData * _Nonnull nearesUser) {
-        ///
+        [weakSelf showUserDetails:nearesUser];
     };
     [self setFirstViewController:searchViewController];
+}
+
+- (void) showUserDetails:(NearestUserData *)user {
+    UserDetailsViewController *controller = [SearchAssembly makeUserDetailsWith:user];
+    [self pushViewController:controller];
 }
 
 @end
