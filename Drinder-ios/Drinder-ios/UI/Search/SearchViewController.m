@@ -14,7 +14,6 @@
 @property (strong, nonatomic) IBOutlet MKMapView *mapKitView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) SearchInteractor* searchInteractor;
-//@property (nonatomic, strong)
 @end
 
 @implementation SearchViewController
@@ -43,6 +42,7 @@
     [self.tableView setDataSource:self];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self.mapKitView setUserTrackingMode:MKUserTrackingModeFollow];
+    [self.mapKitView setScrollEnabled:NO];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -90,12 +90,6 @@
     CLLocationCoordinate2D center = [self.searchInteractor userCoordinate];
     [self.mapKitView setCenterCoordinate:center animated:YES];
     [self.mapKitView addAnnotations:self.searchInteractor.mapAnatation];
-    MKCoordinateRegion region;
-    MKCoordinateSpan span;
-    region.center = center;
-    span.latitudeDelta = 2.0;
-    span.longitudeDelta = 2.0;
-    [self.mapKitView setRegion:region];
 }
 
 
