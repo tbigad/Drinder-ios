@@ -46,6 +46,7 @@
     __weak typeof(self)weakSelf = self;
     RegistrationViewController *registration = [RootAssembly makeRegistrationWith:self.userModel];
     registration.registrationSuccess = ^(UserInfoSession * _Nonnull userInfo) {
+        [weakSelf dismissViewController];
         [weakSelf showMainTabWith:userInfo];
     };
     
