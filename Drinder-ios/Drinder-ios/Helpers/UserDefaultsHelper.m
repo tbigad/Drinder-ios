@@ -16,7 +16,7 @@
 }
 
 + (NSString *)getUserName {
-    NSString *ret = [[[NSUserDefaults standardUserDefaults] valueForKey:@"userName"] stringValue];
+    NSString *ret = [[NSUserDefaults standardUserDefaults] valueForKey:@"userName"] ;
     return ret;
 }
 
@@ -26,7 +26,7 @@
 
 + (NSString *)getPassword {
     //TODO: ADD DECODING
-    NSString *ret = [[[NSUserDefaults standardUserDefaults] valueForKey:@"password"] stringValue];
+    NSString *ret = [[NSUserDefaults standardUserDefaults] valueForKey:@"password"];
     return ret;
 }
 

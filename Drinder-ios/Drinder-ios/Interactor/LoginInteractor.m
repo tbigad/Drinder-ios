@@ -8,6 +8,7 @@
 
 #import "LoginInteractor.h"
 #import "BackendAPIHelper.h"
+#import "UserDefaultsHelper.h"
 
 @interface LoginInteractor()
 @property (nonatomic, weak) UserDataModel* userData;
@@ -18,7 +19,8 @@
 {
     self = [super init];
     if (self) {
-        _userData = model; 
+        _userData = model;
+        [self loadFromUserDefaults];
     }
     return self;
 }
@@ -36,8 +38,14 @@
             return;
         }
         UserInfoSession *userInfoSession = [[UserInfoSession alloc] initWithJSONDictionary:jsonDict];
-        
+        [UserDefaultsHelper setPassword:userInfoSession.password];
+        [UserDefaultsHelper setUserName:userInfoSession.userData.userName];
         complition(userInfoSession, nil); 
     }];
+}
+
+- (void)loadFromUserDefaults {
+    self.login = [UserDefaultsHelper getUserName];
+    self.password = [UserDefaultsHelper getPassword];
 }
 @end
