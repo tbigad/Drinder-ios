@@ -22,9 +22,14 @@
 {
     self = [super init];
     if (self) {
+        __weak typeof(self)weakSelf = self;
         _searchInteractor = interactor;
         _searchInteractor.showErrorMessage = ^(NSString * _Nonnull title, NSString * _Nonnull message) {
             NSLog(@"%@ %@",title,message);
+        };
+        
+        _searchInteractor.usersUpdated = ^{
+            [weakSelf fillMap];
         };
     }
     return self;
@@ -51,13 +56,37 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[SearchTableViewCell reusableId] forIndexPath:indexPath];
-    [cell.titleTextLabel setText:@"Title"];
-    [cell.detailTextLabel setText:@"Description"];
+    switch (indexPath.row) {
+        case 0:
+            [cell.titleTextLabel setText:@"My name"];
+            [cell.descriptionTextLabel setText:[self.searchInteractor userName]];
+            break;
+        case 1:
+            [cell.titleTextLabel setText:@"My alcohol"];
+            [cell.descriptionTextLabel setText:[self.searchInteractor userAlcohol]];
+            break;
+        case 2:
+            [cell.titleTextLabel setText:@"My gender"];
+            [cell.descriptionTextLabel setText:[self.searchInteractor userGender]];
+            break;
+        case 3:
+            [cell.titleTextLabel setText:@"My age"];
+            [cell.descriptionTextLabel setText:[self.searchInteractor userAge]];
+            break;
+        default:
+            break;
+    }
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+
+#pragma mark - Methods from inteactor
+-(void) fillMap {
+    [self.mapKitView setCenterCoordinate: [self.searchInteractor userCoordinate] animated:YES];
+    [self.mapKitView addAnnotations:self.searchInteractor.mapAnatation];
 }
 
 

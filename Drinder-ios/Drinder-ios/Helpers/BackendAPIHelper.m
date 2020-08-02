@@ -59,8 +59,8 @@ static NSString* baseURL = @"https://hackaton-web-server.herokuapp.com";
 
 + (void)postLocationWithUser:(UserInfoSession *)user complition:(void (^)(NSError *))handler {
     NSURLQueryItem *userId = [[NSURLQueryItem alloc] initWithName:@"id" value:user.userData.userID];
-    NSURLQueryItem *userLat = [[NSURLQueryItem alloc] initWithName:@"lat" value:[NSString stringWithFormat:@"%f",user.detailsInfo.latitude]];
-    NSURLQueryItem *userLon = [[NSURLQueryItem alloc] initWithName:@"lon" value:[NSString stringWithFormat:@"%f",user.detailsInfo.longitude]];
+    NSURLQueryItem *userLat = [[NSURLQueryItem alloc] initWithName:@"lat" value:[NSString stringWithFormat:@"%f",user.detailsInfo.coordinate.latitude]];
+    NSURLQueryItem *userLon = [[NSURLQueryItem alloc] initWithName:@"lon" value:[NSString stringWithFormat:@"%f",user.detailsInfo.coordinate.longitude]];
     
     NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURL];
     components.path = @"/location";

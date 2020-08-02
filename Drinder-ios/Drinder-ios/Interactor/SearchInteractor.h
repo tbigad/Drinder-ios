@@ -9,13 +9,21 @@
 #import "Interactor.h"
 #import "UserInfoSession.h"
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchInteractor : Interactor
+@property (nonatomic, strong) NSArray<MKPointAnnotation*>* mapAnatation;
 @property (nonatomic, copy, nullable) void (^showErrorMessage)(NSString* title, NSString* message);
+@property (nonatomic, copy, nullable) void (^usersUpdated)(void);
 
 - (instancetype)initWithUserInfoSession:(UserInfoSession*)session;
+-(NSString*)userName;
+-(NSString*) userAge;
+-(NSString*)userAlcohol;
+-(NSString*)userGender;
+-(CLLocationCoordinate2D)userCoordinate;
 @end
 
 NS_ASSUME_NONNULL_END

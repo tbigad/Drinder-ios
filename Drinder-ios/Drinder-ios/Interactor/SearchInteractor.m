@@ -24,6 +24,7 @@
         _userInfo = session;
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        [_locationManager startUpdatingLocation];
         _queue = [NSOperationQueue new];
         [self.locationManager setDelegate:self];
         [self checkLocationAuthorization];
@@ -55,7 +56,55 @@
 }
 
 - (void) nearestUsersUpdated {
-    
+    NSMutableArray<MKPointAnnotation*>* anotations = [NSMutableArray<MKPointAnnotation*> new];
+    for (NearestUserData* user in self.nearestUsers) {
+        MKPointAnnotation* anotation = [[MKPointAnnotation alloc] init];
+        [anotation setCoordinate:user.location.location.coordinate];
+        [anotation setTitle:user.userName];
+        [anotation setSubtitle:user.alcohol];
+        [anotations addObject:anotation];
+    }
+    self.mapAnatation = [anotations copy];
+    __weak typeof(self)weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        weakSelf.usersUpdated();
+    });
+}
+
+-(NSString*)userName {
+    NSString* ret = self.userInfo.detailsInfo.userName;
+    if (!ret || [ret isEqualToString:@""]) {
+        ret = @"Unknow. Tap to edit";
+    }
+    return ret;
+}
+
+-(NSString*) userAge {
+    NSString* ret = [NSString stringWithFormat:@"%d",[self.userInfo.detailsInfo.age intValue]];
+    if (!ret || [ret isEqualToString:@"0"]) {
+        ret = @"Unknow. Tap to edit";
+    }
+    return ret;
+}
+
+-(NSString*)userAlcohol {
+    NSString* ret = self.userInfo.detailsInfo.alcohol;
+    if (!ret || [ret isEqualToString:@""]) {
+        ret = @"Unknow. Tap to edit";
+    }
+    return ret;
+}
+
+-(NSString*)userGender {
+    NSString* ret = self.userInfo.detailsInfo.gender;
+    if (!ret || [ret isEqualToString:@""]) {
+        ret = @"Unknow. Tap to edit";
+    }
+    return ret;
+}
+
+-(CLLocationCoordinate2D)userCoordinate {
+    return self.userInfo.detailsInfo.coordinate;
 }
 
 - (void) requestInfo {
@@ -84,8 +133,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     CLLocation * location = [locations.firstObject copy];
-    self.userInfo.detailsInfo.latitude = location.coordinate.latitude;
-    self.userInfo.detailsInfo.longitude = location.coordinate.longitude;
+    self.userInfo.detailsInfo.coordinate = location.coordinate;
     [self requestInfo];
 }
 

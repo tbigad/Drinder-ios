@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserDetailsInfo : NSObject
-@property (nonatomic, assign) double latitude;
-@property (nonatomic, assign) double longitude;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy)NSString *alcohol;
 @property (nonatomic, copy)NSString *gender;
 @property (nonatomic, strong)NSNumber *age;
