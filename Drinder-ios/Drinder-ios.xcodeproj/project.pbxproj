@@ -37,6 +37,7 @@
 		F3559BE624D5F37B001C08EC /* MoreCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BE524D5F37B001C08EC /* MoreCoordinator.m */; };
 		F3559BE924D5F3A5001C08EC /* SearchAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BE824D5F3A5001C08EC /* SearchAssembly.m */; };
 		F3559BEC24D5F3E3001C08EC /* MoreAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BEB24D5F3E3001C08EC /* MoreAssembly.m */; };
+		F3559BEF24D6C250001C08EC /* SearchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BEE24D6C250001C08EC /* SearchInteractor.m */; };
 		F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526C224D498E0007DCAED /* AppDelegate.m */; };
 		F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CD24D498E5007DCAED /* Assets.xcassets */; };
 		F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CF24D498E6007DCAED /* LaunchScreen.storyboard */; };
@@ -105,6 +106,8 @@
 		F3559BE824D5F3A5001C08EC /* SearchAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchAssembly.m; sourceTree = "<group>"; };
 		F3559BEA24D5F3E3001C08EC /* MoreAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreAssembly.h; sourceTree = "<group>"; };
 		F3559BEB24D5F3E3001C08EC /* MoreAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreAssembly.m; sourceTree = "<group>"; };
+		F3559BED24D6C250001C08EC /* SearchInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchInteractor.h; sourceTree = "<group>"; };
+		F3559BEE24D6C250001C08EC /* SearchInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchInteractor.m; sourceTree = "<group>"; };
 		F3C526BE24D498E0007DCAED /* Drinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C526C124D498E0007DCAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3C526C224D498E0007DCAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				F32EE99124D55BD50042FFFA /* Interactor.m */,
 				F32EE99C24D56F690042FFFA /* RegistrationInteractor.h */,
 				F32EE99D24D56F690042FFFA /* RegistrationInteractor.m */,
+				F3559BED24D6C250001C08EC /* SearchInteractor.h */,
+				F3559BEE24D6C250001C08EC /* SearchInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 				F32EE99624D560180042FFFA /* UserDataModel.m in Sources */,
 				F32EE99224D55BD50042FFFA /* Interactor.m in Sources */,
 				F32EE9AD24D5A2840042FFFA /* UserInfoSession.m in Sources */,
+				F3559BEF24D6C250001C08EC /* SearchInteractor.m in Sources */,
 				F32EE9A624D580400042FFFA /* UserDefaultsHelper.m in Sources */,
 				F3559BE924D5F3A5001C08EC /* SearchAssembly.m in Sources */,
 				F339AA2A24D4D30100A6679B /* RootAssembly.m in Sources */,

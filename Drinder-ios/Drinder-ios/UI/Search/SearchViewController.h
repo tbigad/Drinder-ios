@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchInteractor.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchViewController : UIViewController
-
+- (instancetype)initWithInteractor:(SearchInteractor*)interactor;
 @end
 
 NS_ASSUME_NONNULL_END

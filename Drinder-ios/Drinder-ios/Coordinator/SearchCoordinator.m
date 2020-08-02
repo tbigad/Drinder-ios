@@ -27,7 +27,7 @@
 }
 
 - (void) showSearch {
-    SearchViewController *searchViewController = [SearchAssembly makeSearchWith];
+    SearchViewController *searchViewController = [SearchAssembly makeSearchWithWith:self.userInfoSession];
     [self setFirstViewController:searchViewController];
 }
 

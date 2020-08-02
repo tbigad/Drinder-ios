@@ -9,13 +9,22 @@
 #import "SearchViewController.h"
 #import "SearchTableViewCell.h"
 #import "MapKit/MapKit.h"
+
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic, strong) SearchInteractor* searchInteractor;
 @end
 
 @implementation SearchViewController
+- (instancetype)initWithInteractor:(SearchInteractor*)interactor
+{
+    self = [super init];
+    if (self) {
+        _searchInteractor = interactor;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

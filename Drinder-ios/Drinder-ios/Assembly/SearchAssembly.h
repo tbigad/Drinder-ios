@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchAssembly : Assembly
 + (SearchCoordinator*) makeSearchCoordinatorWith:(UserInfoSession*)session andParent:(Coordinator*)parent;
-+ (SearchViewController*) makeSearchWith;
++ (SearchViewController*) makeSearchWithWith:(UserInfoSession*)userInfo;
 @end
 
 NS_ASSUME_NONNULL_END
