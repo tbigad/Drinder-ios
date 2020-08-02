@@ -9,6 +9,8 @@
 #import "RegistrationInteractor.h"
 #import "BackendAPIHelper.h"
 #import "RegistrationViewController.h"
+#import "UserDefaultsHelper.h"
+
 @interface RegistrationInteractor ()
 @property (nonatomic, weak) UserDataModel* userData;
 @end
@@ -42,7 +44,8 @@
             return;
         }
         UserInfoSession *userInfoSession = [[UserInfoSession alloc] initWithJSONDictionary:jsonDict];
-        
+        [UserDefaultsHelper setPassword:userInfoSession.password];
+        [UserDefaultsHelper setUserName:userInfoSession.userData.login];
         complition(userInfoSession, nil);
     }];
     

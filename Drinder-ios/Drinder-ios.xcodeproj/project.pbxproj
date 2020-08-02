@@ -39,6 +39,13 @@
 		F3559BEC24D5F3E3001C08EC /* MoreAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BEB24D5F3E3001C08EC /* MoreAssembly.m */; };
 		F3559BEF24D6C250001C08EC /* SearchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BEE24D6C250001C08EC /* SearchInteractor.m */; };
 		F3559BF524D6D964001C08EC /* UserDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BF424D6D964001C08EC /* UserDetailsInfo.m */; };
+		F3559C0724D6F299001C08EC /* BaseBackendOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559BFF24D6F299001C08EC /* BaseBackendOperations.m */; };
+		F3559C0924D6F299001C08EC /* AsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C0324D6F299001C08EC /* AsyncOperation.m */; };
+		F3559C0D24D6F560001C08EC /* UserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C0C24D6F560001C08EC /* UserLocation.m */; };
+		F3559C1024D70BCD001C08EC /* AfterLoginGetInfoOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C0F24D70BCD001C08EC /* AfterLoginGetInfoOperation.m */; };
+		F3559C1324D70C2B001C08EC /* PostLocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C1224D70C2B001C08EC /* PostLocationOperation.m */; };
+		F3559C1624D70C52001C08EC /* GetNearestUsersLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C1524D70C52001C08EC /* GetNearestUsersLocation.m */; };
+		F3559C1924D70C78001C08EC /* NearestUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C1824D70C78001C08EC /* NearestUserData.m */; };
 		F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526C224D498E0007DCAED /* AppDelegate.m */; };
 		F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CD24D498E5007DCAED /* Assets.xcassets */; };
 		F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CF24D498E6007DCAED /* LaunchScreen.storyboard */; };
@@ -111,6 +118,20 @@
 		F3559BEE24D6C250001C08EC /* SearchInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchInteractor.m; sourceTree = "<group>"; };
 		F3559BF324D6D964001C08EC /* UserDetailsInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDetailsInfo.h; sourceTree = "<group>"; };
 		F3559BF424D6D964001C08EC /* UserDetailsInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDetailsInfo.m; sourceTree = "<group>"; };
+		F3559BFC24D6F299001C08EC /* AsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncOperation.h; sourceTree = "<group>"; };
+		F3559BFF24D6F299001C08EC /* BaseBackendOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseBackendOperations.m; sourceTree = "<group>"; };
+		F3559C0224D6F299001C08EC /* BaseBackendOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBackendOperations.h; sourceTree = "<group>"; };
+		F3559C0324D6F299001C08EC /* AsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncOperation.m; sourceTree = "<group>"; };
+		F3559C0B24D6F560001C08EC /* UserLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLocation.h; sourceTree = "<group>"; };
+		F3559C0C24D6F560001C08EC /* UserLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLocation.m; sourceTree = "<group>"; };
+		F3559C0E24D70BCD001C08EC /* AfterLoginGetInfoOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AfterLoginGetInfoOperation.h; sourceTree = "<group>"; };
+		F3559C0F24D70BCD001C08EC /* AfterLoginGetInfoOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AfterLoginGetInfoOperation.m; sourceTree = "<group>"; };
+		F3559C1124D70C2B001C08EC /* PostLocationOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostLocationOperation.h; sourceTree = "<group>"; };
+		F3559C1224D70C2B001C08EC /* PostLocationOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostLocationOperation.m; sourceTree = "<group>"; };
+		F3559C1424D70C52001C08EC /* GetNearestUsersLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetNearestUsersLocation.h; sourceTree = "<group>"; };
+		F3559C1524D70C52001C08EC /* GetNearestUsersLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetNearestUsersLocation.m; sourceTree = "<group>"; };
+		F3559C1724D70C78001C08EC /* NearestUserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearestUserData.h; sourceTree = "<group>"; };
+		F3559C1824D70C78001C08EC /* NearestUserData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearestUserData.m; sourceTree = "<group>"; };
 		F3C526BE24D498E0007DCAED /* Drinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C526C124D498E0007DCAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3C526C224D498E0007DCAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +182,7 @@
 		9B78E4D724D5B9CC00141277 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				9B78E4D824D5B9CC00141277 /* Cells */,
 				9B78E4DC24D5B9CC00141277 /* MoreViewController.xib */,
 				9B78E4DE24D5B9CC00141277 /* MoreViewController.h */,
 				9B78E4DD24D5B9CC00141277 /* MoreViewController.m */,
@@ -213,6 +235,10 @@
 				F32EE99524D560180042FFFA /* UserDataModel.m */,
 				F3559BF324D6D964001C08EC /* UserDetailsInfo.h */,
 				F3559BF424D6D964001C08EC /* UserDetailsInfo.m */,
+				F3559C0B24D6F560001C08EC /* UserLocation.h */,
+				F3559C0C24D6F560001C08EC /* UserLocation.m */,
+				F3559C1724D70C78001C08EC /* NearestUserData.h */,
+				F3559C1824D70C78001C08EC /* NearestUserData.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -279,6 +305,31 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		F3559BF624D6F299001C08EC /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				F3559BFE24D6F299001C08EC /* BackendOperations */,
+				F3559BFC24D6F299001C08EC /* AsyncOperation.h */,
+				F3559C0324D6F299001C08EC /* AsyncOperation.m */,
+				F3559C0E24D70BCD001C08EC /* AfterLoginGetInfoOperation.h */,
+				F3559C0F24D70BCD001C08EC /* AfterLoginGetInfoOperation.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		F3559BFE24D6F299001C08EC /* BackendOperations */ = {
+			isa = PBXGroup;
+			children = (
+				F3559BFF24D6F299001C08EC /* BaseBackendOperations.m */,
+				F3559C0224D6F299001C08EC /* BaseBackendOperations.h */,
+				F3559C1124D70C2B001C08EC /* PostLocationOperation.h */,
+				F3559C1224D70C2B001C08EC /* PostLocationOperation.m */,
+				F3559C1424D70C52001C08EC /* GetNearestUsersLocation.h */,
+				F3559C1524D70C52001C08EC /* GetNearestUsersLocation.m */,
+			);
+			path = BackendOperations;
+			sourceTree = "<group>";
+		};
 		F3C526B524D498E0007DCAED = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +351,7 @@
 		F3C526C024D498E0007DCAED /* Drinder-ios */ = {
 			isa = PBXGroup;
 			children = (
+				F3559BF624D6F299001C08EC /* Operations */,
 				F32EE9AA24D5A2640042FFFA /* DataSession */,
 				F32EE9A024D57EF70042FFFA /* Helpers */,
 				F32EE99324D560010042FFFA /* DataModel */,
@@ -320,7 +372,6 @@
 		F3C526DA24D4BCE3007DCAED /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9B78E4D824D5B9CC00141277 /* Cells */,
 				9B78E4E424D6004500141277 /* Search */,
 				9B78E4D724D5B9CC00141277 /* More */,
 				F3C526DC24D4BE75007DCAED /* Registration */,
@@ -470,6 +521,8 @@
 			files = (
 				F3C526EE24D4C6E2007DCAED /* ModalCoordinator.m in Sources */,
 				F3559BDA24D5EB67001C08EC /* MainTabCoordinator.m in Sources */,
+				F3559C0D24D6F560001C08EC /* UserLocation.m in Sources */,
+				F3559C1024D70BCD001C08EC /* AfterLoginGetInfoOperation.m in Sources */,
 				F3559BDD24D5EC08001C08EC /* MainAssembly.m in Sources */,
 				F3C526E324D4BFBB007DCAED /* LoginViewController.m in Sources */,
 				9B78E4E824D600B500141277 /* SearchViewController.m in Sources */,
@@ -477,7 +530,10 @@
 				9B78E4D624D5B62100141277 /* KeyboardHeightObserver.m in Sources */,
 				F3C526DF24D4BF11007DCAED /* ViewController.m in Sources */,
 				F32EE99624D560180042FFFA /* UserDataModel.m in Sources */,
+				F3559C1924D70C78001C08EC /* NearestUserData.m in Sources */,
+				F3559C0924D6F299001C08EC /* AsyncOperation.m in Sources */,
 				F32EE99224D55BD50042FFFA /* Interactor.m in Sources */,
+				F3559C1624D70C52001C08EC /* GetNearestUsersLocation.m in Sources */,
 				F32EE9AD24D5A2840042FFFA /* UserInfoSession.m in Sources */,
 				F3559BEF24D6C250001C08EC /* SearchInteractor.m in Sources */,
 				F32EE9A624D580400042FFFA /* UserDefaultsHelper.m in Sources */,
@@ -490,8 +546,10 @@
 				F32EE99E24D56F690042FFFA /* RegistrationInteractor.m in Sources */,
 				F32EE9A324D57F320042FFFA /* BackendAPIHelper.m in Sources */,
 				F3C526E724D4C3F3007DCAED /* Coordinator.m in Sources */,
+				F3559C1324D70C2B001C08EC /* PostLocationOperation.m in Sources */,
 				F32EE9B024D5A7220042FFFA /* TabCoordinator.m in Sources */,
 				F3C526D424D498E6007DCAED /* main.m in Sources */,
+				F3559C0724D6F299001C08EC /* BaseBackendOperations.m in Sources */,
 				F3559BE624D5F37B001C08EC /* MoreCoordinator.m in Sources */,
 				F3559BE324D5F347001C08EC /* SearchCoordinator.m in Sources */,
 				F3559BEC24D5F3E3001C08EC /* MoreAssembly.m in Sources */,

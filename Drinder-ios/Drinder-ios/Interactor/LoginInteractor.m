@@ -39,7 +39,7 @@
         }
         UserInfoSession *userInfoSession = [[UserInfoSession alloc] initWithJSONDictionary:jsonDict];
         [UserDefaultsHelper setPassword:userInfoSession.password];
-        [UserDefaultsHelper setUserName:userInfoSession.userData.userName];
+        [UserDefaultsHelper setUserName:userInfoSession.userData.login];
         complition(userInfoSession, nil); 
     }];
 }

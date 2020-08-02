@@ -7,9 +7,12 @@
 //
 
 #import "SearchInteractor.h"
+#import "AfterLoginGetInfoOperation.h"
+
 @interface SearchInteractor() <CLLocationManagerDelegate>
 @property (weak) UserInfoSession *userInfo;
 @property CLLocationManager *locationManager;
+@property (nonatomic, strong)NSOperationQueue *queue;
 @end
 
 @implementation SearchInteractor
@@ -20,6 +23,7 @@
         _userInfo = session;
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        _queue = [NSOperationQueue new];
         [self.locationManager setDelegate:self];
     }
     return self;
@@ -34,7 +38,11 @@
 }
 
 - (void) requestInfo {
-    
+    AfterLoginGetInfoOperation *operation = [[AfterLoginGetInfoOperation alloc] initWithUserSession:self.userInfo];
+    [operation setCompletionBlock:^{
+        NSLog(@"AfterLoginGetInfoOperation");
+    }];
+    [self.queue addOperation:operation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
@@ -55,6 +63,7 @@
     CLLocation * location = [locations.firstObject copy];
     self.userInfo.detailsInfo.latitude = location.coordinate.latitude;
     self.userInfo.detailsInfo.longitude = location.coordinate.longitude;
+    [self requestInfo];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {

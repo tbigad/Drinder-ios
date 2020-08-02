@@ -55,7 +55,68 @@ static NSString* baseURL = @"https://hackaton-web-server.herokuapp.com";
         handler(data, error);
     }];
     [task resume];
-    
 }
 
++ (void)postLocationWithUser:(UserInfoSession *)user complition:(void (^)(NSError *))handler {
+    NSURLQueryItem *userId = [[NSURLQueryItem alloc] initWithName:@"id" value:user.userData.userID];
+    NSURLQueryItem *userLat = [[NSURLQueryItem alloc] initWithName:@"lat" value:[NSString stringWithFormat:@"%f",user.detailsInfo.latitude]];
+    NSURLQueryItem *userLon = [[NSURLQueryItem alloc] initWithName:@"lon" value:[NSString stringWithFormat:@"%f",user.detailsInfo.longitude]];
+    
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURL];
+    components.path = @"/location";
+    components.queryItems = @[userId,userLat,userLon];
+    NSURL *url = components.URL;
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error) {
+            handler(error);
+            return;
+        }
+        handler(nil);
+    }];
+    [task resume];
+}
+
++ (void)findNearestWithUser:(UserInfoSession *)user complition:(void (^)(NSData *, NSError *))handler {
+    NSURLQueryItem *userId = [[NSURLQueryItem alloc] initWithName:@"id" value:user.userData.userID];
+    
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURL];
+    components.path = @"/find";
+    components.queryItems = @[userId];
+    NSURL *url = components.URL;
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error) {
+            handler(nil, error);
+            return;
+        }
+        handler(data, error);
+    }];
+    [task resume];
+}
+
++ (void)postDetailsWithUser:(UserInfoSession *)user complition:(void (^)(NSData *, NSError *))handler {
+    NSURLQueryItem *userLogin = [[NSURLQueryItem alloc] initWithName:@"login" value:user.userData.login];
+    NSURLQueryItem *userPassword = [[NSURLQueryItem alloc] initWithName:@"pass" value:user.password];
+    NSURLQueryItem *alcohol = [[NSURLQueryItem alloc] initWithName:@"alcohol" value:user.detailsInfo.alcohol];
+    NSURLQueryItem *gender = [[NSURLQueryItem alloc] initWithName:@"alcohol" value:user.detailsInfo.gender];
+    NSURLQueryItem *userAge = [[NSURLQueryItem alloc] initWithName:@"age" value:[NSString stringWithFormat:@"%d",[user.detailsInfo.age intValue]]];
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:baseURL];
+    components.path = @"/detail";
+    components.queryItems = @[userLogin, userPassword, alcohol, gender, userAge];
+    NSURL *url = components.URL;
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error) {
+            handler(nil,error);
+            return;
+        }
+        handler(data,nil);
+    }];
+    [task resume];
+}
 @end

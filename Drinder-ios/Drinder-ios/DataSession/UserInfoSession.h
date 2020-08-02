@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UserInfoSession : NSObject
 @property (nonatomic, strong) UserDataModel* userData;
-@property (nonatomic, copy) NSString *password;
 @property (nonatomic, strong) UserDetailsInfo* detailsInfo;
+@property (nonatomic, copy) NSString *password;
 
 - (instancetype)initWithJSONDictionary:(NSDictionary*)dictionary;
 @end
