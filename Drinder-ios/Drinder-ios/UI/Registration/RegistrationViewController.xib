@@ -23,14 +23,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPo-vp-dKX">
-                    <rect key="frame" x="180" y="529" width="54" height="30"/>
+                    <rect key="frame" x="180" y="433" width="54" height="30"/>
                     <state key="normal" title="Sign Up"/>
                     <connections>
                         <action selector="didTappedSignUpButton:" destination="-1" eventType="touchUpInside" id="Hor-DV-z5e"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUI-8L-RYH">
-                    <rect key="frame" x="25" y="387" width="364" height="122"/>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUI-8L-RYH">
+                    <rect key="frame" x="25" y="293" width="364" height="122"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDW-HX-qwG">
                             <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
@@ -80,19 +80,19 @@
                         <action selector="didTapCloseButton:" destination="-1" eventType="touchUpInside" id="qXf-2g-cTv"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="kPA-dA-HSQ">
+                    <rect key="frame" x="30" y="193" width="354" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="9mA-f8-sLR"/>
+                    </constraints>
+                </imageView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rv4-mj-Yrb">
-                    <rect key="frame" x="185" y="570" width="45" height="45"/>
+                    <rect key="frame" x="185" y="471" width="45" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="RAi-kJ-fCu"/>
                         <constraint firstAttribute="width" constant="45" id="ULT-kO-SPX"/>
                     </constraints>
                 </activityIndicatorView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="kPA-dA-HSQ">
-                    <rect key="frame" x="30" y="307" width="354" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="9mA-f8-sLR"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -109,6 +109,7 @@
                 <constraint firstItem="ZUI-8L-RYH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Pxf-dl-oHK"/>
                 <constraint firstItem="wPo-vp-dKX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SgM-AQ-4Iu"/>
                 <constraint firstItem="hex-5c-yCE" firstAttribute="top" secondItem="wPo-vp-dKX" secondAttribute="bottom" constant="95" id="Y4M-70-gO8"/>
+                <constraint firstItem="wPo-vp-dKX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YCv-fm-Bog"/>
                 <constraint firstItem="wPo-vp-dKX" firstAttribute="top" secondItem="ZUI-8L-RYH" secondAttribute="bottom" constant="8" id="ZoY-xn-Ctg"/>
                 <constraint firstItem="kPA-dA-HSQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dh7-lb-w3G"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="hex-5c-yCE" secondAttribute="bottom" constant="25" id="dts-vg-lVo"/>
@@ -123,6 +124,7 @@
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="LYe-Ff-rEr"/>
+                    <exclude reference="1Q5-NA-99k"/>
                     <exclude reference="6B6-BR-xEu"/>
                     <exclude reference="6K4-oI-ggn"/>
                     <exclude reference="ZoY-xn-Ctg"/>
