@@ -8,7 +8,7 @@
 
 #import "EditViewController.h"
 
-@interface  EditViewController  () <UIPickerViewDelegate , UIPickerViewDataSource>
+@interface  EditViewController  () <UIPickerViewDelegate , UIPickerViewDataSource, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIStackView *stackView;
 @property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
@@ -54,6 +54,9 @@
     [self.pickerView setDelegate:self];
     [self.pickerView setDataSource:self];
     [self setupView];
+    self.alcohol.delegate = self;
+    self.gender.delegate = self;
+    self.userName.delegate = self;
 }
 
 - (void) setupView {
