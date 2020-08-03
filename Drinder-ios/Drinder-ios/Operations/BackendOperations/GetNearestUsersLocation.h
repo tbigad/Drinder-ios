@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GetNearestUsersLocation : BaseBackendOperations
 - (instancetype)initWithSession:(UserInfoSession *)session;
-@property (nonatomic, copy, nullable) void (^resultingData)(NSArray<NearestUserData*>*);
+@property (nonatomic, copy, nullable) void (^resultingData)(NSArray<NearestUserData*>*  _Nullable resultData, NSError* _Nullable  error);
 @end
 
 NS_ASSUME_NONNULL_END

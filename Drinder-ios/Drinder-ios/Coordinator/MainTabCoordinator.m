@@ -36,6 +36,7 @@
     [self addTabbedCoordinator:searchCoordinator];
     
     MoreCoordinator *moreCoordinator = [MoreAssembly makeMoreCoordinatorWithParent:self];
+    moreCoordinator.logoutBlock = self.logoutBlock;
     UITabBarItem* moreTabItem = [[UITabBarItem alloc]initWithTitle:nil image:[UIImage imageNamed:@"more"] tag:1];
     moreCoordinator.baseViewController.tabBarItem = moreTabItem;
     moreTabItem.imageInsets = UIEdgeInsetsMake(17, 0, -17, 0);

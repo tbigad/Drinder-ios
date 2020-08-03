@@ -32,8 +32,8 @@
     PostLocationOperation* postLocation = [[PostLocationOperation alloc] initWithSession:self.userSession];
     GetNearestUsersLocation *getNearest = [[GetNearestUsersLocation alloc] initWithSession:self.userSession];
     PostUserDetailsOperation *postUser = [[PostUserDetailsOperation alloc] initWithSession:self.userSession];
-    [getNearest setResultingData:^(NSArray<NearestUserData *> * data) {
-        wealSelf.nearestUserData = data;
+    [getNearest setResultingData:^(NSArray<NearestUserData *> * _Nullable resultData, NSError * _Nullable error) {
+        wealSelf.nearestUserData = resultData;
     }];
     [self.queue addOperations:@[postLocation, getNearest, postUser] waitUntilFinished:YES];
     

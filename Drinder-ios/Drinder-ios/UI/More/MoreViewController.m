@@ -37,7 +37,8 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-   return 1;
+    self.logoutBlock();
+    return 1;
     
 }
 
@@ -45,7 +46,6 @@
     MoreTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[MoreTableViewCell reusableId] forIndexPath:indexPath];
 
     return cell;
-
 }
 
 @end

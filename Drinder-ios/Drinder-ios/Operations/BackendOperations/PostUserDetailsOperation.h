@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PostUserDetailsOperation : BaseBackendOperations
+@property (nonatomic, copy, nullable) void (^resultBlock)(NSDictionary* _Nullable resultData, NSError* _Nullable  error);
 - (instancetype)initWithSession:(UserInfoSession *)session;
 @end
 

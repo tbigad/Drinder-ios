@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GetDetailsOperation : BaseBackendOperations
 - (instancetype)initWithUserData:(NearestUserData *)user;
+@property (nonatomic, copy, nullable) void (^resultBlock)(NSDictionary* _Nullable resultData, NSError* _Nullable  error);
 @end
 
 NS_ASSUME_NONNULL_END

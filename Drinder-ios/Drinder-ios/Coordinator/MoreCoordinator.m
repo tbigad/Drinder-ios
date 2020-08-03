@@ -22,6 +22,7 @@
 
 - (void) showMore {
     MoreViewController *moreViewController = [MoreAssembly makeMore];
+    moreViewController.logoutBlock = self.logoutBlock;
     self.baseViewController = moreViewController; 
 }
 @end
