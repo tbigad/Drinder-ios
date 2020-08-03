@@ -13,6 +13,7 @@
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *mapKitView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) SearchInteractor* searchInteractor;
 @end
 
@@ -55,6 +56,7 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [super viewWillAppear:animated];
     [self.searchInteractor checkLocationAuthorization];
+    [self.activityIndicator startAnimating];
     [self.tableView reloadData];
 }
 
@@ -99,6 +101,7 @@
     CLLocationCoordinate2D center = [self.searchInteractor userCoordinate];
     [self.mapKitView setCenterCoordinate:center animated:YES];
     [self.mapKitView addAnnotations:self.searchInteractor.mapAnatation];
+    [self.activityIndicator stopAnimating];
 }
 
 #pragma mark - MapKit Delegate

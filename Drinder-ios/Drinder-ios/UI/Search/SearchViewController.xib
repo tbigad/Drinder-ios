@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
             <connections>
+                <outlet property="activityIndicator" destination="Nmg-eF-9Ht" id="ulh-Yp-mCq"/>
                 <outlet property="mapKitView" destination="cmv-Em-0L6" id="ywN-fK-tcu"/>
                 <outlet property="tableView" destination="JRH-gT-hmc" id="GSR-z2-v5y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -27,13 +28,21 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cmv-Em-0L6">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                 </mapView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Nmg-eF-9Ht">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="JRH-gT-hmc" firstAttribute="top" secondItem="cmv-Em-0L6" secondAttribute="bottom" id="0pX-T9-4W3"/>
                 <constraint firstItem="cmv-Em-0L6" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7jD-BR-w28"/>
                 <constraint firstItem="cmv-Em-0L6" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Efp-F3-g9g"/>
+                <constraint firstItem="Nmg-eF-9Ht" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OSv-eQ-FAY"/>
+                <constraint firstItem="Nmg-eF-9Ht" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="bgb-L2-lX7"/>
+                <constraint firstItem="JRH-gT-hmc" firstAttribute="top" secondItem="Nmg-eF-9Ht" secondAttribute="bottom" id="f8W-T5-Bo6"/>
                 <constraint firstItem="cmv-Em-0L6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="jS8-Gd-XCc"/>
+                <constraint firstItem="Nmg-eF-9Ht" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="mwA-fL-s1h"/>
                 <constraint firstItem="JRH-gT-hmc" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="piK-KD-d1q"/>
                 <constraint firstItem="JRH-gT-hmc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="qmR-vy-SPh"/>
                 <constraint firstItem="JRH-gT-hmc" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="wXM-2Q-DKB"/>
