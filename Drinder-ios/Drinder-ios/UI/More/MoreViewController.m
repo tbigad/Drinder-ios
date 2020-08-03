@@ -37,7 +37,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.logoutBlock();
+ //   self.logoutBlock();
     return 1;
     
 }

@@ -140,7 +140,13 @@
 }
 
 - (NearestUserData*)didTapOnAnototation:(MKPointAnnotation*)anotation {
-    NSUInteger index = [self.mapAnatation indexOfObject:anotation];
+    NSUInteger index = [[self.mapAnatation indexesOfObjectsPassingTest:^BOOL(MKPointAnnotation * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj.title isEqualToString:anotation.title] &&
+            [obj.subtitle isEqualToString:anotation.subtitle]) {
+            return true;
+        }
+        return false;
+    }] firstIndex];
     if(index != NSNotFound) {
         return [self.nearestUsers objectAtIndex:index];
     }
