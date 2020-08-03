@@ -51,6 +51,7 @@
 		F3559C1324D70C2B001C08EC /* PostLocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C1224D70C2B001C08EC /* PostLocationOperation.m */; };
 		F3559C1624D70C52001C08EC /* GetNearestUsersLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C1524D70C52001C08EC /* GetNearestUsersLocation.m */; };
 		F3559C1924D70C78001C08EC /* NearestUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3559C1824D70C78001C08EC /* NearestUserData.m */; };
+		F370BD5C24D79A3900E19BCE /* PostUserDetailsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F370BD5B24D79A3900E19BCE /* PostUserDetailsOperation.m */; };
 		F3C526C324D498E0007DCAED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C526C224D498E0007DCAED /* AppDelegate.m */; };
 		F3C526CE24D498E5007DCAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CD24D498E5007DCAED /* Assets.xcassets */; };
 		F3C526D124D498E6007DCAED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C526CF24D498E6007DCAED /* LaunchScreen.storyboard */; };
@@ -145,6 +146,8 @@
 		F3559C1524D70C52001C08EC /* GetNearestUsersLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetNearestUsersLocation.m; sourceTree = "<group>"; };
 		F3559C1724D70C78001C08EC /* NearestUserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearestUserData.h; sourceTree = "<group>"; };
 		F3559C1824D70C78001C08EC /* NearestUserData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearestUserData.m; sourceTree = "<group>"; };
+		F370BD5A24D79A3900E19BCE /* PostUserDetailsOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostUserDetailsOperation.h; sourceTree = "<group>"; };
+		F370BD5B24D79A3900E19BCE /* PostUserDetailsOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostUserDetailsOperation.m; sourceTree = "<group>"; };
 		F3C526BE24D498E0007DCAED /* Drinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C526C124D498E0007DCAED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3C526C224D498E0007DCAED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 				F3559C1524D70C52001C08EC /* GetNearestUsersLocation.m */,
 				F32E490E24D72C650076EC29 /* GetDetailsOperation.h */,
 				F32E490F24D72C650076EC29 /* GetDetailsOperation.m */,
+				F370BD5A24D79A3900E19BCE /* PostUserDetailsOperation.h */,
+				F370BD5B24D79A3900E19BCE /* PostUserDetailsOperation.m */,
 			);
 			path = BackendOperations;
 			sourceTree = "<group>";
@@ -570,6 +575,7 @@
 				F3559BDA24D5EB67001C08EC /* MainTabCoordinator.m in Sources */,
 				F3559C0D24D6F560001C08EC /* UserLocation.m in Sources */,
 				F3559C1024D70BCD001C08EC /* AfterLoginGetInfoOperation.m in Sources */,
+				F370BD5C24D79A3900E19BCE /* PostUserDetailsOperation.m in Sources */,
 				F3559BDD24D5EC08001C08EC /* MainAssembly.m in Sources */,
 				F3C526E324D4BFBB007DCAED /* LoginViewController.m in Sources */,
 				9B78E4E824D600B500141277 /* SearchViewController.m in Sources */,

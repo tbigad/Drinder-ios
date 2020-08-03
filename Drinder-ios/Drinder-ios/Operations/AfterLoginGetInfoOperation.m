@@ -8,6 +8,7 @@
 
 #import "AfterLoginGetInfoOperation.h"
 #import "GetDetailsOperation.h"
+#import "PostUserDetailsOperation.h"
 
 @interface AfterLoginGetInfoOperation ()
 @property (nonatomic, strong)NSOperationQueue *queue;
@@ -30,10 +31,11 @@
     __weak typeof(self)wealSelf = self;
     PostLocationOperation* postLocation = [[PostLocationOperation alloc] initWithSession:self.userSession];
     GetNearestUsersLocation *getNearest = [[GetNearestUsersLocation alloc] initWithSession:self.userSession];
+    PostUserDetailsOperation *postUser = [[PostUserDetailsOperation alloc] initWithSession:self.userSession];
     [getNearest setResultingData:^(NSArray<NearestUserData *> * data) {
         wealSelf.nearestUserData = data;
     }];
-    [self.queue addOperations:@[postLocation, getNearest] waitUntilFinished:YES];
+    [self.queue addOperations:@[postLocation, getNearest, postUser] waitUntilFinished:YES];
     
     NSMutableArray<NSOperation*> *detailsOperations = [NSMutableArray new];
     

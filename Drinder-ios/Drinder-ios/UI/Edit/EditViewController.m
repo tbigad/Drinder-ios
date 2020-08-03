@@ -71,7 +71,7 @@
         case EditGender:
             [self.titleLabel setText:@"Enter your gender"];
             [self.gender setHidden:NO];
-            [self.gender setText:self.userSession.detailsInfo.userName];
+            [self.gender setText:self.userSession.detailsInfo.gender];
             break;
         case EditAge:
             [self.titleLabel setText:@"Select your age"];
@@ -110,11 +110,16 @@
             self.userSession.detailsInfo.gender = self.gender.text;
             break;
         case EditAge:
-            self.userSession.detailsInfo.age = [NSNumber numberWithInteger:[self.pickerView selectedRowInComponent:1] + 18];
+            self.userSession.detailsInfo.age = [self getAge];
             break;
     }
-    
+    [self.userSession.detailsInfo saveToUserDefaults];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (NSNumber*) getAge {
+    NSNumber* ret = [NSNumber numberWithInteger:[self.pickerView selectedRowInComponent:0] + 18];
+    return ret;
 }
 
 @end

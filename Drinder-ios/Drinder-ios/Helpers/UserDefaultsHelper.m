@@ -15,13 +15,13 @@
     return nil;
 }
 
-+ (NSString *)getUserName {
-    NSString *ret = [[NSUserDefaults standardUserDefaults] valueForKey:@"userName"] ;
++ (NSString *)getLogin {
+    NSString *ret = [[NSUserDefaults standardUserDefaults] valueForKey:@"login"] ;
     return ret;
 }
 
-+ (void)setUserName:(NSString *)userName {
-    [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"userName"];
++ (void)setLogin:(NSString *)userName {
+    [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"login"];
 }
 
 + (NSString *)getPassword {
@@ -33,5 +33,40 @@
 + (void)setPassword:(NSString *)userName {
     //TODO: ADD ENCODING
     [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"password"];
+}
+
++ (void)setAge:(NSNumber *)userName {
+    [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"age"];
+}
++ (NSNumber *)getAge {
+    NSNumber *ret = [[NSUserDefaults standardUserDefaults] valueForKey:@"age"] ;
+    return ret;
+}
+
++ (void)setGender:(NSString *)userName {
+    [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"gender"];
+}
+
++ (NSString *)getGender {
+    NSString *ret = [[NSUserDefaults standardUserDefaults] valueForKey:@"gender"];
+    return ret;
+}
+
++ (void)setAlcohol:(NSString *)userName {
+    [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"alcohol"];
+}
+
++ (NSString *)getAlcohol {
+    NSString *ret = [[NSUserDefaults standardUserDefaults] valueForKey:@"alcohol"];
+    return ret;
+}
+
++ (NSString *)getUserName {
+    NSString *ret = [[NSUserDefaults standardUserDefaults] valueForKey:@"userName"] ;
+    return ret;
+}
+
++ (void)setUseName:(NSString *)userName {
+    [[NSUserDefaults standardUserDefaults] setValue:userName forKeyPath:@"userName"];
 }
 @end

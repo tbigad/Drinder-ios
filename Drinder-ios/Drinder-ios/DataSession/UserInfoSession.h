@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UserDataModel* userData;
 @property (nonatomic, strong) UserDetailsInfo* detailsInfo;
 @property (nonatomic, copy) NSString *password;
-@property (nonatomic, assign) BOOL needSync;
 
 - (instancetype)initWithJSONDictionary:(NSDictionary*)dictionary;
 @end
