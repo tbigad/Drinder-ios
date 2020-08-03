@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSNumber*)getAge;
 + (NSString *)getUserName;
 + (void)setUseName:(NSString *)userName;
++ (void) cleanUser;
 @end
 
 NS_ASSUME_NONNULL_END
