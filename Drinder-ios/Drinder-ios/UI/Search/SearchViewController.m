@@ -36,11 +36,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
     [self.tableView registerNib:[UINib nibWithNibName:[SearchTableViewCell reusableId] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[SearchTableViewCell reusableId]];
     
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self.mapKitView setUserTrackingMode:MKUserTrackingModeFollow];
     [self.mapKitView setScrollEnabled:NO];
     [self.mapKitView setDelegate:self];
@@ -54,6 +55,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.searchInteractor checkLocationAuthorization];
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -88,7 +90,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.openEdit();
+    self.openEdit(indexPath.row);
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - Methods from inteactor

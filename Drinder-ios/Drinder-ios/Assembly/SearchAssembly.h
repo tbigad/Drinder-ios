@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (SearchCoordinator*) makeSearchCoordinatorWith:(UserInfoSession*)session andParent:(Coordinator*)parent;
 + (SearchViewController*) makeSearchWithWith:(UserInfoSession*)userInfo;
 + (UserDetailsViewController*) makeUserDetailsWith:(NearestUserData*)data;
-+ (EditViewController *) makeEditViewControllerWith:(UserInfoSession *)session;
++ (EditViewController *) makeEditViewControllerWith:(UserInfoSession *)session and:(NSUInteger)type;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -6,13 +6,21 @@
 //  Copyright © 2020 Pavel N. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
+#import "UserInfoSession.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EditViewController : UIViewController
+typedef NS_ENUM(NSInteger, UserInfoEditType) {
+    EditName = 0,
+    EditAlcohol = 1,
+    EditGender = 2,
+    EditAge = 3
+};
 
+@interface EditViewController : ViewController
 
+- (instancetype)initWithUserSession:(UserInfoSession*)session with:(NSUInteger)type;
 @end
 
 NS_ASSUME_NONNULL_END

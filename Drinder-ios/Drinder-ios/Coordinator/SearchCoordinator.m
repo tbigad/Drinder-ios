@@ -33,8 +33,8 @@
     searchViewController.showDetail = ^(NearestUserData * _Nonnull nearesUser) {
         [weakSelf showUserDetails:nearesUser];
     };
-    searchViewController.openEdit = ^{
-        [weakSelf showEditController];  
+    searchViewController.openEdit = ^(NSUInteger type) {
+        [weakSelf showEditController:type];
     };
     [self setFirstViewController:searchViewController];
 }
@@ -44,8 +44,8 @@
     [self pushViewController:controller];
 }
 
--(void) showEditController {
-    EditViewController *edit = [SearchAssembly makeEditViewControllerWith:self.userInfoSession];
+-(void) showEditController:(NSUInteger)type {
+    EditViewController *edit = [SearchAssembly makeEditViewControllerWith:self.userInfoSession and:type];
     [self pushViewController:edit];
 }
 @end
