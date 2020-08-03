@@ -70,7 +70,8 @@
     tabCoordinator.baseViewController.modalPresentationStyle = UIModalPresentationFullScreen;
     tabCoordinator.logoutBlock = ^{
         [UserDefaultsHelper cleanUser];
-        weakSelf.userModel = [UserDataModel new];
+        weakSelf.userModel.login = @"";
+        weakSelf.userModel.userID = @"";
         [weakSelf showLogin];
     };
     
