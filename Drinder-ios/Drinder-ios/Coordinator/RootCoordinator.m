@@ -10,6 +10,8 @@
 #import "LoginViewController.h"
 #import "RootAssembly.h"
 #import "MainAssembly.h"
+#import "UserDefaultsHelper.h"
+#import "AppDelegate.h"
 @interface RootCoordinator ()
 @property (nonatomic, strong) UserDataModel* userModel;
 @end
@@ -28,6 +30,10 @@
 
 - (void) showLogin {
     LoginViewController *login = [RootAssembly makeLoginWith:self.userModel];
+    if(self.baseViewController) {
+        AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        [appDelegate.window setRootViewController:login];
+    }
     
     __weak typeof(self)weakSelf = self;
     login.loginSuccess = ^(UserInfoSession * _Nonnull userInfo) {
@@ -63,7 +69,10 @@
     MainTabCoordinator *tabCoordinator = [MainAssembly makeMainCoordinatorWithUserInfoSession:session andParent:self];
     tabCoordinator.baseViewController.modalPresentationStyle = UIModalPresentationFullScreen;
     tabCoordinator.logoutBlock = ^{
-        [weakSelf dismissViewController];
+        [UserDefaultsHelper cleanUser];
+        weakSelf.userModel.login = @"";
+        weakSelf.userModel.userID = @"";
+        [weakSelf showLogin];
     };
     
     [self presentViewController:tabCoordinator.baseViewController];

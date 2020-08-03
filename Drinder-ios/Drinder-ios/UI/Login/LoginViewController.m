@@ -40,6 +40,11 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self setupContent];
+}
+
 - (void)setupContent {
     self.emailTextField.text = self.loginInteractor.login;
     self.passwordTextField.text = self.loginInteractor.password;
