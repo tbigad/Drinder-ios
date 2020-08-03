@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PostLocationOperation : BaseBackendOperations
 - (instancetype)initWithSession:(UserInfoSession *)session;
-@property (nonatomic, copy, nullable) void (^resultBlock)(NSDictionary* _Nullable resultData,NSError* _Nullable  error);
+@property (nonatomic, copy, nullable) void (^resultBlock)(NSError* _Nullable  error);
 @end
 
 NS_ASSUME_NONNULL_END

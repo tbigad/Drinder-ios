@@ -36,7 +36,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     [self.tableView registerNib:[UINib nibWithNibName:[SearchTableViewCell reusableId] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[SearchTableViewCell reusableId]];
     
@@ -53,6 +52,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [super viewWillAppear:animated];
     [self.searchInteractor checkLocationAuthorization];
     [self.tableView reloadData];

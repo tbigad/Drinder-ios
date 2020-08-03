@@ -24,14 +24,13 @@
 
 - (void)main {
     __weak typeof(self)wealSelf = self;
-    [BackendAPIHelper postDetailsWithUser:self.userSession complition:^(NSData * _Nonnull data, NSError * _Nonnull error) {
+    [BackendAPIHelper postDetailsWithUser:self.userSession complition:^(NSError * _Nonnull error) {
         if(error) {
-            wealSelf.resultBlock(nil, error);
+            wealSelf.resultBlock(error);
             [wealSelf fail];
             return;
         }
-        NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        wealSelf.resultBlock(jsonDict, nil);
+        wealSelf.resultBlock(nil);
         [wealSelf succes];
     }];
 }

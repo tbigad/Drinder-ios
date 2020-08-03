@@ -35,6 +35,16 @@
     [getNearest setResultingData:^(NSArray<NearestUserData *> * _Nullable resultData, NSError * _Nullable error) {
         wealSelf.nearestUserData = resultData;
     }];
+    [postUser setResultBlock:^(NSError * _Nullable error) {
+        if(error) {
+            NSLog(@"error");
+        }
+    }];
+    [postLocation setResultBlock:^(NSError * _Nullable error) {
+        if(error) {
+            NSLog(@"error");
+        }
+    }];
     [self.queue addOperations:@[postLocation, getNearest, postUser] waitUntilFinished:YES];
     
     NSMutableArray<NSOperation*> *detailsOperations = [NSMutableArray new];
@@ -44,7 +54,14 @@
     }];
     
     for (NearestUserData *user in self.nearestUserData) {
+        __weak typeof(user)weakUser = user;
         GetDetailsOperation* operation = [[GetDetailsOperation alloc] initWithUserData:user];
+        [operation setResultBlock:^(NSDictionary * _Nullable resultData, NSError * _Nullable error) {
+            if(error){
+                return;
+            }
+            [weakUser parseDetailsDictionary:resultData];
+        }];
         [finishBlock addDependency:operation];
         [detailsOperations addObject:operation];
     }

@@ -97,7 +97,7 @@ static NSString* baseURL = @"https://hackaton-web-server.herokuapp.com";
     [task resume];
 }
 
-+ (void)postDetailsWithUser:(UserInfoSession *)user complition:(void (^)(NSData *, NSError *))handler {
++ (void)postDetailsWithUser:(UserInfoSession *)user complition:(void (^)(NSError *error))handler {
     NSURLQueryItem *userLogin = [[NSURLQueryItem alloc] initWithName:@"login" value:user.userData.login];
     NSURLQueryItem *userPassword = [[NSURLQueryItem alloc] initWithName:@"pass" value:user.password];
     NSURLQueryItem *alcohol = [[NSURLQueryItem alloc] initWithName:@"alcohol" value:user.detailsInfo.alcohol];
@@ -112,10 +112,10 @@ static NSString* baseURL = @"https://hackaton-web-server.herokuapp.com";
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(error) {
-            handler(nil,error);
+            handler(error);
             return;
         }
-        handler(data,nil);
+        handler(nil);
     }];
     [task resume];
 }

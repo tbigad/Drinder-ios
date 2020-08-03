@@ -35,7 +35,6 @@
             return;
         }
         NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        [wealSelf.user parseDetailsDictionary:jsonDict];
         wealSelf.resultBlock(jsonDict, nil);
         [wealSelf finish];
     }];
