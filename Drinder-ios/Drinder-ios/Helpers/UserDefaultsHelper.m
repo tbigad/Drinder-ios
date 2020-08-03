@@ -83,7 +83,7 @@
 +(void)cleanUser {
     [[NSUserDefaults standardUserDefaults] setValue:@"" forKeyPath:@"userName"];
     [[NSUserDefaults standardUserDefaults] setValue:@"" forKeyPath:@"alcohol"];
-    [[NSUserDefaults standardUserDefaults] setValue:@"" forKeyPath:@"age"];
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKeyPath:@"age"];
     [[NSUserDefaults standardUserDefaults] setValue:@"" forKeyPath:@"gender"];
     [[NSUserDefaults standardUserDefaults] setValue:@"" forKeyPath:@"login"];
     [[NSUserDefaults standardUserDefaults] setValue:@"" forKeyPath:@"password"];

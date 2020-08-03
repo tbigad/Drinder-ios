@@ -80,7 +80,7 @@
             [self.titleLabel setText:@"Select your age"];
             [self.pickerView setHidden:NO];
             NSInteger row;
-            if(!self.userSession.detailsInfo.age) {
+            if(self.userSession.detailsInfo.age == 0) {
                 row = 0;
             } else {
                 row = [self.userSession.detailsInfo.age integerValue] - 18;
