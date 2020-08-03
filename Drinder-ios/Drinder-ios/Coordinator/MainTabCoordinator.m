@@ -35,6 +35,12 @@
     [self addTabbedCoordinator:searchCoordinator];
     
     MoreCoordinator *moreCoordinator = [MoreAssembly makeMoreCoordinatorWithParent:self];
+    
+    __weak typeof(self) weakSelf = self;
+    moreCoordinator.logoutBlock = ^{
+        weakSelf.logoutBlock();
+    };
+    
     UITabBarItem* moreTabItem = [[UITabBarItem alloc]initWithTitle:nil image:[UIImage imageNamed:@"more"] tag:1];
     moreCoordinator.baseViewController.tabBarItem = moreTabItem;
     [self addTabbedCoordinator:moreCoordinator];

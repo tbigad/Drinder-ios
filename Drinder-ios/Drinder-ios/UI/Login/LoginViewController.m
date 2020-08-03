@@ -14,6 +14,9 @@
 @property (nonatomic, strong)LoginInteractor* loginInteractor;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+
 @end
 
 @implementation LoginViewController
@@ -34,6 +37,12 @@
         [weakSelf.heightConstraint setConstant:height.floatValue];
     }];
     [self hideWhenTappedAround];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self setupContent];
 }
 
 - (void)setupContent {
@@ -47,20 +56,26 @@
 
 - (IBAction)didTappedLoginButton:(UIButton *)sender {
     __weak typeof(self)weakSelf = self;
+    [self.activityIndicator startAnimating];
     self.loginInteractor.login = self.emailTextField.text;
     self.loginInteractor.password = self.passwordTextField.text;
     [self.loginInteractor didTapLoginWithComplition:^(UserInfoSession *userInfo, NSString * message) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.activityIndicator stopAnimating];
             if (userInfo) {
                 weakSelf.loginSuccess(userInfo);
             } else {
                 [weakSelf showError:@"Login error" Text:message];
+                
             }
         });
     }];
+    
 }
 
-
+-(BOOL)shouldAutorotate {
+    return NO;
+}
 
 
 

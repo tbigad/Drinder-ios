@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "more.png",
+      "filename" : "output-onlinepngtools-12.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "more@2x.png",
+      "filename" : "output-onlinepngtools-13.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "more@3x.png",
+      "filename" : "output-onlinepngtools-14.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

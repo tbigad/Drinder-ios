@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController">
             <connections>
+                <outlet property="activityIndicator" destination="rv4-mj-Yrb" id="WPZ-ER-eGU"/>
                 <outlet property="emailTextField" destination="sDW-HX-qwG" id="V9o-7H-odV"/>
                 <outlet property="firstPasswordTextField" destination="x2q-qj-oIp" id="LsB-8c-BRb"/>
                 <outlet property="secondPasswordTextField" destination="Xsb-vo-NRS" id="fQR-oH-iyg"/>
@@ -28,8 +29,8 @@
                         <action selector="didTappedSignUpButton:" destination="-1" eventType="touchUpInside" id="Hor-DV-z5e"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUI-8L-RYH">
-                    <rect key="frame" x="25" y="303" width="364" height="122"/>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZUI-8L-RYH">
+                    <rect key="frame" x="25" y="293" width="364" height="122"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDW-HX-qwG">
                             <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
@@ -60,7 +61,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13i-Rd-Ez6">
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="13i-Rd-Ez6">
                             <rect key="frame" x="225" y="0.0" width="51" height="31"/>
                             <connections>
                                 <action selector="didTapSwitch:" destination="-1" eventType="valueChanged" id="ayg-jh-bGK"/>
@@ -79,25 +80,55 @@
                         <action selector="didTapCloseButton:" destination="-1" eventType="touchUpInside" id="qXf-2g-cTv"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="kPA-dA-HSQ">
+                    <rect key="frame" x="30" y="193" width="354" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="9mA-f8-sLR"/>
+                    </constraints>
+                </imageView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rv4-mj-Yrb">
+                    <rect key="frame" x="185" y="471" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="RAi-kJ-fCu"/>
+                        <constraint firstAttribute="width" constant="45" id="ULT-kO-SPX"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="ZUI-8L-RYH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="1Q5-NA-99k"/>
                 <constraint firstItem="ZUI-8L-RYH" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="25" id="3xg-89-dCj"/>
                 <constraint firstItem="wPo-vp-dKX" firstAttribute="top" secondItem="ZUI-8L-RYH" secondAttribute="bottom" constant="10" id="6B6-BR-xEu"/>
                 <constraint firstItem="wPo-vp-dKX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6K4-oI-ggn"/>
+                <constraint firstItem="rv4-mj-Yrb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7V8-zL-f1z"/>
                 <constraint firstItem="5sG-UE-CX0" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="25" id="AU2-8N-Tc6"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="5sG-UE-CX0" secondAttribute="trailing" constant="25" id="JRN-Bg-HWo"/>
                 <constraint firstItem="hex-5c-yCE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kq4-YS-NK4"/>
+                <constraint firstItem="kPA-dA-HSQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LYe-Ff-rEr"/>
+                <constraint firstItem="wPo-vp-dKX" firstAttribute="top" secondItem="ZUI-8L-RYH" secondAttribute="bottom" constant="20" id="O8Y-77-9UQ"/>
+                <constraint firstItem="ZUI-8L-RYH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Pxf-dl-oHK"/>
+                <constraint firstItem="wPo-vp-dKX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SgM-AQ-4Iu"/>
                 <constraint firstItem="hex-5c-yCE" firstAttribute="top" secondItem="wPo-vp-dKX" secondAttribute="bottom" constant="95" id="Y4M-70-gO8"/>
+                <constraint firstItem="wPo-vp-dKX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YCv-fm-Bog"/>
                 <constraint firstItem="wPo-vp-dKX" firstAttribute="top" secondItem="ZUI-8L-RYH" secondAttribute="bottom" constant="8" id="ZoY-xn-Ctg"/>
+                <constraint firstItem="kPA-dA-HSQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dh7-lb-w3G"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="hex-5c-yCE" secondAttribute="bottom" constant="25" id="dts-vg-lVo"/>
+                <constraint firstItem="rv4-mj-Yrb" firstAttribute="top" secondItem="wPo-vp-dKX" secondAttribute="bottom" constant="15" id="fYj-Gr-0th"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ZUI-8L-RYH" secondAttribute="trailing" constant="25" id="npC-gb-kqM"/>
+                <constraint firstItem="ZUI-8L-RYH" firstAttribute="top" secondItem="kPA-dA-HSQ" secondAttribute="bottom" constant="30" id="ujv-bw-RNy"/>
                 <constraint firstItem="wPo-vp-dKX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="und-Rl-sUF"/>
+                <constraint firstItem="kPA-dA-HSQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="wco-jK-Up9"/>
+                <constraint firstAttribute="trailing" secondItem="kPA-dA-HSQ" secondAttribute="trailing" constant="30" id="zLh-mo-ALE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="LYe-Ff-rEr"/>
+                    <exclude reference="1Q5-NA-99k"/>
                     <exclude reference="6B6-BR-xEu"/>
+                    <exclude reference="6K4-oI-ggn"/>
+                    <exclude reference="ZoY-xn-Ctg"/>
+                    <exclude reference="und-Rl-sUF"/>
                     <exclude reference="Y4M-70-gO8"/>
                 </mask>
             </variation>
@@ -105,6 +136,7 @@
         </view>
     </objects>
     <resources>
-        <image name="close" width="50" height="50"/>
+        <image name="Image" width="1014" height="250"/>
+        <image name="close" width="180" height="180"/>
     </resources>
 </document>

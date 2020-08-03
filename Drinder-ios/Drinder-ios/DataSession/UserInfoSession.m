@@ -18,11 +18,12 @@
         NSString *userID = [dictionary valueForKey:@"id"];
         NSString *login = [dictionary valueForKey:@"login"];
         UserDataModel *userDataModel = [UserDataModel new];
-        userDataModel.userName = login;
+        userDataModel.login = login;
         userDataModel.userID = userID;
         
         _password = pass;
         _userData = userDataModel;
+        _detailsInfo = [UserDetailsInfo new];
     }
     return self;
 }

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MoreViewController : ViewController
-
+@property (nonatomic, copy, nullable) void (^logoutBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END

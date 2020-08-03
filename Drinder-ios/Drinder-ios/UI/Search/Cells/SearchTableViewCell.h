@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *titleTextLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descriptionTextLabel;
 +(NSString *)reusableId ;
 @end
 

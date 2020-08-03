@@ -9,6 +9,8 @@
 #import "RegistrationInteractor.h"
 #import "BackendAPIHelper.h"
 #import "RegistrationViewController.h"
+#import "UserDefaultsHelper.h"
+
 @interface RegistrationInteractor ()
 @property (nonatomic, weak) UserDataModel* userData;
 @end
@@ -27,6 +29,7 @@
 - (void)didTapRegistrationWithComplition:(void (^)(UserInfoSession *, NSString *))complition {
     if (![self isValidRegistrationData]) {
         complition(nil,@"User name or password incorrect");
+        return;
     }
     
     [BackendAPIHelper registrationWith:self.userName password:self.firstPassword complition:^(NSData * _Nonnull data, NSError * _Nonnull error) {
@@ -41,7 +44,8 @@
             return;
         }
         UserInfoSession *userInfoSession = [[UserInfoSession alloc] initWithJSONDictionary:jsonDict];
-        
+        [UserDefaultsHelper setPassword:userInfoSession.password];
+        [UserDefaultsHelper setLogin:userInfoSession.userData.login];
         complition(userInfoSession, nil);
     }];
     
@@ -49,8 +53,9 @@
 }
 
 - (BOOL) isValidRegistrationData {
-    if (self.userName.length >= 8 && self.firstPassword.length >= 3 && [self.firstPassword isEqualToString:self.repeatPassword] && self.overEighteen) {
+    if ( (self.userName.length >= 8) && (self.firstPassword.length >= 3) && [self.firstPassword isEqualToString:self.repeatPassword] && self.overEighteen) {
+        return YES;
     }
-    return YES;
+    return NO;
 }
 @end

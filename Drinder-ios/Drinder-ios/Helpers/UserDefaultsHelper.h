@@ -11,10 +11,19 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserDefaultsHelper : NSObject
-+ (NSString*)getUserName;
-+ (void) setUserName:(NSString*)userName;
++ (NSString*)getLogin;
++ (void) setLogin:(NSString*)userName;
 + (NSString*)getPassword;
 + (void) setPassword:(NSString*)userName;
++ (void) setAlcohol:(NSString*)userName;
++ (NSString*)getAlcohol;
++ (void) setGender:(NSString*)userName;
++ (NSString*)getGender;
++ (void) setAge:(NSNumber*)userName;
++ (NSNumber*)getAge;
++ (NSString *)getUserName;
++ (void)setUseName:(NSString *)userName;
++ (void) cleanUser;
 @end
 
 NS_ASSUME_NONNULL_END

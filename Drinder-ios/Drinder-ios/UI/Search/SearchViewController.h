@@ -6,12 +6,15 @@
 //  Copyright © 2020 Pavel N. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
+#import "SearchInteractor.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SearchViewController : UIViewController
-
+@interface SearchViewController : ViewController
+@property (nonatomic, copy, nullable) void (^showDetail)(NearestUserData* nearesUser);
+- (instancetype)initWithInteractor:(SearchInteractor*)interactor;
+@property (nonatomic, copy, nullable) void (^openEdit)(NSUInteger type);
 @end
 
 NS_ASSUME_NONNULL_END
