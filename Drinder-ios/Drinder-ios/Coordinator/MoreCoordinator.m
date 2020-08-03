@@ -22,7 +22,10 @@
 
 - (void) showMore {
     MoreViewController *moreViewController = [MoreAssembly makeMore];
-    moreViewController.logoutBlock = self.logoutBlock;
+    __weak typeof(self) weakSelf = self;
+    moreViewController.logoutBlock = ^{
+        weakSelf.logoutBlock();
+    };
     self.baseViewController = moreViewController; 
 }
 @end
